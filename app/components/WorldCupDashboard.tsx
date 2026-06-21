@@ -22,6 +22,7 @@ import {
 import { feature } from "topojson-client";
 import qualifyingData from "@/app/data/qualifying-records.json";
 import {
+  associationMapPoints,
   countryAliases,
   dataFreshness,
   knockoutMatches,
@@ -31,11 +32,17 @@ import {
   type Match,
   type TournamentTeam,
 } from "@/app/data/worldCupData";
+import {
+  compactRegionLabel,
+  regionLabel,
+  regionName,
+  type Language,
+} from "@/app/data/regionMeta";
 
 type QualifyingRecord = {
   team: string;
   confed: string;
-  status: "qualified" | "eliminated";
+  status: "qualified" | "eliminated" | "not_entered";
   stage: string;
   group?: string;
   position?: number | null;
@@ -74,10 +81,84 @@ for (const team of teams) {
   teamsByGroup.set(team.group, groupTeams);
 }
 
-const statusLabels = {
-  all: "全部",
-  finals: "决赛圈",
-  eliminated: "预选赛淘汰",
+const statusKeys = ["all", "finals", "eliminated", "not_entered"] as const;
+type StatusFilter = (typeof statusKeys)[number];
+
+const copy = {
+  zh: {
+    all: "全部",
+    bracket: "淘汰赛对阵图",
+    bracketHint: "比赛编号 73-104；时间为场馆当地时间，未定席位以小组名或胜者编号显示",
+    code: "球队代码",
+    dataMissing: "该国家/协会未在当前资格赛主表中定位。",
+    eliminated: "预选赛淘汰",
+    finals: "决赛圈",
+    globeAlt: "2026 世界杯国家状态地球仪",
+    globeLegend: "青色：决赛圈；红色：预选赛淘汰；紫色：未参赛；灰色：主数据未覆盖",
+    globeTitle: "世界状态",
+    group: "组",
+    language: "English",
+    latestDataGap: "这个国家/地区可以在地球仪上选中，但当前数据集没有精确到它的 2026 世界杯资格赛阶段。",
+    nextMatch: "下一场",
+    not_entered: "未参赛",
+    points: "分",
+    position: "小组排名",
+    recordCount: "资格赛记录",
+    recordList: "全部状态",
+    reset: "重置视角",
+    rows: "条",
+    scoredMatches: "已录入比分",
+    search: "搜索球队、国家/地区、洲际足联或阶段",
+    standings: "小组积分",
+    title: "2026 世界杯状态地球仪",
+    tournamentTeams: "决赛圈球队",
+    unknown: "未覆盖",
+    played: "赛",
+    won: "胜",
+    drawn: "平",
+    lost: "负",
+    gd: "净",
+    team: "队",
+    scheduled: "待赛",
+    live: "进行中",
+  },
+  en: {
+    all: "All",
+    bracket: "Knockout Bracket",
+    bracketHint: "Matches 73-104; times are local to the venue, and undecided slots use group or winner labels",
+    code: "Team code",
+    dataMissing: "This association is selectable on the globe, but this data set has not mapped its exact 2026 qualifying stage.",
+    eliminated: "Eliminated in qualifying",
+    finals: "Finals",
+    globeAlt: "2026 World Cup country status globe",
+    globeLegend: "Teal: finals; red: eliminated; purple: did not enter; gray: not covered",
+    globeTitle: "World Status",
+    group: "Group",
+    language: "中文",
+    latestDataGap: "This country or association is selectable on the globe, but this data set has not mapped its exact 2026 World Cup qualifying stage.",
+    nextMatch: "Next match",
+    not_entered: "Did not enter",
+    points: "Pts",
+    position: "Group rank",
+    recordCount: "Qualifying records",
+    recordList: "All Statuses",
+    reset: "Reset view",
+    rows: "rows",
+    scoredMatches: "Scores entered",
+    search: "Search team, country/region, confederation, or stage",
+    standings: "Group Standings",
+    title: "2026 World Cup Status Globe",
+    tournamentTeams: "Finals teams",
+    unknown: "Not covered",
+    played: "P",
+    won: "W",
+    drawn: "D",
+    lost: "L",
+    gd: "GD",
+    team: "Team",
+    scheduled: "Scheduled",
+    live: "Live",
+  },
 };
 
 const groupLetters = Array.from(teamsByGroup.keys()).sort();
@@ -105,6 +186,19 @@ const knockoutRoundLabels: Record<(typeof bracketRoundOrder)[number] | "Third pl
   Final: "决赛",
   "Third place": "三四名",
 };
+
+const knockoutRoundLabelsEn: Record<(typeof bracketRoundOrder)[number] | "Third place", string> = {
+  "Round of 32": "Round of 32",
+  "Round of 16": "Round of 16",
+  Quarterfinals: "Quarterfinals",
+  Semifinals: "Semifinals",
+  Final: "Final",
+  "Third place": "Third place",
+};
+
+function knockoutLabel(round: (typeof bracketRoundOrder)[number] | "Third place", language: Language) {
+  return language === "zh" ? knockoutRoundLabels[round] : knockoutRoundLabelsEn[round];
+}
 
 const bracketSlotHeight = 184;
 const bracketCardHeight = 164;
@@ -186,9 +280,9 @@ function calculateStandings(group: string): StandingRow[] {
   });
 }
 
-function scoreLabel(match: Match) {
-  if (match.status === "live") return "进行中";
-  if (match.status === "scheduled") return "待赛";
+function scoreLabel(match: Match, language: Language) {
+  if (match.status === "live") return copy[language].live;
+  if (match.status === "scheduled") return copy[language].scheduled;
   return `${match.homeScore}-${match.awayScore}`;
 }
 
@@ -213,8 +307,9 @@ function statusForCountry(countryName: string) {
   const teamName = normalizeName(countryName);
   const team = teamByName.get(teamName);
   if (team) return "finals";
-  const record = recordByTeam.get(teamName);
+  const record = recordByTeam.get(teamName) ?? recordByTeam.get(countryName);
   if (record?.status === "eliminated") return "eliminated";
+  if (record?.status === "not_entered") return "not_entered";
   return "unknown";
 }
 
@@ -222,11 +317,61 @@ function countryFill(status: string, isSelected: boolean) {
   if (isSelected) return "#ffd166";
   if (status === "finals") return "#1b9aaa";
   if (status === "eliminated") return "#d46a6a";
+  if (status === "not_entered") return "#8f7bd8";
   return "#d7dde7";
 }
 
 function recordForTeam(teamName: string) {
-  return recordByTeam.get(teamName);
+  return recordByTeam.get(teamName) ?? recordByTeam.get(normalizeName(teamName));
+}
+
+function statusLabel(status: string, language: Language) {
+  if (status === "finals" || status === "qualified") return copy[language].finals;
+  if (status === "eliminated") return copy[language].eliminated;
+  if (status === "not_entered") return copy[language].not_entered;
+  return copy[language].unknown;
+}
+
+function groupLabel(group: string, language: Language) {
+  return language === "zh" ? `${group} 组` : `Group ${group}`;
+}
+
+function stageLabel(stage: string, language: Language) {
+  if (language === "zh") return stage;
+  return stage
+    .replaceAll("晋级 2026 世界杯决赛圈；", "Qualified for the 2026 World Cup finals; ")
+    .replaceAll("晋级 2026 世界杯决赛圈", "Qualified for the 2026 World Cup finals")
+    .replaceAll("主办国自动晋级，未参加 CONCACAF 预选赛；", "Qualified automatically as host; did not play CONCACAF qualifying; ")
+    .replaceAll("主办国自动晋级，未参加 CONCACAF 预选赛", "Qualified automatically as host; did not play CONCACAF qualifying")
+    .replaceAll("未参加 2026 世界杯预选赛：", "Did not enter 2026 World Cup qualifying: ")
+    .replaceAll("不是 FIFA 成员；", "Not a FIFA member; ")
+    .replaceAll("自 2022 年起暂停俄罗斯国家队参加旗下赛事", "Russian national teams have been suspended from FIFA/UEFA competitions since 2022")
+    .replaceAll("厄立特里亚足协在赛前退出，FIFA/CAF 确认其所有比赛取消", "Eritrea withdrew before playing; FIFA/CAF confirmed its matches were cancelled")
+    .replaceAll("曾可通过 2027 亚洲杯资格赛路径参赛，但未进入 2026 世界杯预选赛抽签", "had an AFC Asian Cup qualifying route but did not enter the 2026 World Cup qualifying draw")
+    .replaceAll("第一轮", "first round")
+    .replaceAll("第二轮", "second round")
+    .replaceAll("第三轮", "third round")
+    .replaceAll("第四轮", "fourth round")
+    .replaceAll("小组赛", "group stage")
+    .replaceAll("半决赛", "semifinal")
+    .replaceAll("决赛", "final")
+    .replaceAll("附加赛", "play-off")
+    .replaceAll("直接晋级", "direct qualification")
+    .replaceAll("负于", "lost to")
+    .replaceAll("负于新西兰；洲际附加赛未出线", "lost to New Zealand; did not qualify through the inter-confederation play-offs")
+    .replaceAll("淘汰", "eliminated")
+    .replaceAll("第1名", "1st")
+    .replaceAll("第2名", "2nd")
+    .replaceAll("第3名", "3rd")
+    .replaceAll("第4名", "4th")
+    .replaceAll("第5名", "5th")
+    .replaceAll("第6名", "6th")
+    .replaceAll("FIFA 赛事使用 Chinese Taipei 名称", "FIFA competitions use the name Chinese Taipei")
+    .replaceAll("已锁定小组第一并晋级 32 强", "clinched first place in the group and advanced to the Round of 32")
+    .replaceAll("已被淘汰", "eliminated")
+    .replaceAll("战", " matches, ")
+    .replaceAll("分", " pts")
+    .replaceAll("组", "Group");
 }
 
 function makeRows() {
@@ -256,8 +401,10 @@ export function WorldCupDashboard() {
   const [rotation, setRotation] = useState<[number, number]>([-18, -18]);
   const [selectedTeam, setSelectedTeam] = useState("United States");
   const [query, setQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<"all" | "finals" | "eliminated">("all");
+  const [language, setLanguage] = useState<Language>("zh");
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const [activeGroup, setActiveGroup] = useState("D");
+  const text = copy[language];
   const dragState = useRef<{
     x: number;
     y: number;
@@ -269,7 +416,7 @@ export function WorldCupDashboard() {
   useEffect(() => {
     let cancelled = false;
 
-    fetch("/countries-110m.json")
+    fetch("countries-110m.json")
       .then((response) => response.json())
       .then((topology: Topology) => {
         if (cancelled) return;
@@ -289,15 +436,21 @@ export function WorldCupDashboard() {
   const filteredRows = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return rows.filter((row) => {
+      const zhName = regionName(row.team, "zh").toLowerCase();
+      const enName = regionName(row.team, "en").toLowerCase();
       const matchesQuery =
         !normalized ||
         row.team.toLowerCase().includes(normalized) ||
+        zhName.includes(normalized) ||
+        enName.includes(normalized) ||
         row.confed.toLowerCase().includes(normalized) ||
-        row.stage.toLowerCase().includes(normalized);
+        row.stage.toLowerCase().includes(normalized) ||
+        stageLabel(row.stage, "en").toLowerCase().includes(normalized);
       const matchesStatus =
         statusFilter === "all" ||
         (statusFilter === "finals" && row.status === "qualified") ||
-        (statusFilter === "eliminated" && row.status === "eliminated");
+        (statusFilter === "eliminated" && row.status === "eliminated") ||
+        (statusFilter === "not_entered" && row.status === "not_entered");
       return matchesQuery && matchesStatus;
     });
   }, [query, rows, statusFilter]);
@@ -307,7 +460,7 @@ export function WorldCupDashboard() {
   const selectedStatus = selectedTournamentTeam
     ? "finals"
     : selectedRecord
-      ? "eliminated"
+      ? selectedRecord.status
       : "unknown";
   const selectedMatches = latestMatchesFor(selectedTeam);
   const selectedNext = nextMatchFor(selectedTeam);
@@ -339,27 +492,30 @@ export function WorldCupDashboard() {
   const path = useMemo(() => geoPath(projection), [projection]);
   const selectedCountryName = selectedTournamentTeam?.name ?? selectedTeam;
   const visibleCenter: [number, number] = [-rotation[0], -rotation[1]];
-  const visibleMarkers = teams
-    .map((team) => {
+  const visibleMarkers = associationMapPoints
+    .map((association) => {
       const isFrontFacing =
-        geoDistance([team.lon, team.lat], visibleCenter) <= Math.PI / 2;
+        geoDistance([association.lon, association.lat], visibleCenter) <= Math.PI / 2;
       if (!isFrontFacing) return null;
-      const point = projection([team.lon, team.lat]);
+      const point = projection([association.lon, association.lat]);
       if (!point) return null;
       return {
-        team,
+        association,
         x: Number(point[0].toFixed(3)),
         y: Number(point[1].toFixed(3)),
       };
     })
-    .filter(Boolean) as { team: TournamentTeam; x: number; y: number }[];
+    .filter(Boolean) as { association: (typeof associationMapPoints)[number]; x: number; y: number }[];
 
   function selectTeam(teamName: string) {
     const team = teamByName.get(teamName);
+    const association = associationMapPoints.find((item) => item.name === teamName);
     setSelectedTeam(teamName);
     if (team) {
       setActiveGroup(team.group);
       setRotation([-team.lon, -team.lat]);
+    } else if (association) {
+      setRotation([-association.lon, -association.lat]);
     }
   }
 
@@ -406,23 +562,30 @@ export function WorldCupDashboard() {
             <Globe2 size={16} aria-hidden="true" />
             FIFA World Cup 26
           </div>
-          <h1>2026 世界杯状态地球仪</h1>
-          <p>{dataFreshness.label}</p>
+          <h1>{text.title}</h1>
+          <p>{language === "zh" ? dataFreshness.label : `As of ${dataFreshness.asOf} (US Pacific Time)`}</p>
         </div>
 
         <div className="metric-strip">
           <div>
             <span>{teams.length}</span>
-            <small>决赛圈球队</small>
+            <small>{text.tournamentTeams}</small>
           </div>
           <div>
             <span>{records.length}</span>
-            <small>资格赛记录</small>
+            <small>{text.recordCount}</small>
           </div>
           <div>
             <span>{matches.filter((match) => match.status === "final").length}</span>
-            <small>已录入比分</small>
+            <small>{text.scoredMatches}</small>
           </div>
+          <button
+            className="language-toggle"
+            type="button"
+            onClick={() => setLanguage(language === "zh" ? "en" : "zh")}
+          >
+            {text.language}
+          </button>
         </div>
       </section>
 
@@ -430,14 +593,14 @@ export function WorldCupDashboard() {
         <div className="globe-panel">
           <div className="panel-title">
             <div>
-              <h2>世界状态</h2>
-              <p>青色：决赛圈；红色：预选赛淘汰；灰色：主数据未覆盖</p>
+              <h2>{text.globeTitle}</h2>
+              <p>{text.globeLegend}</p>
             </div>
             <button
               className="icon-button"
               type="button"
-              aria-label="重置视角"
-              title="重置视角"
+              aria-label={text.reset}
+              title={text.reset}
               onClick={() => setRotation([-18, -18])}
             >
               <RotateCcw size={18} />
@@ -448,7 +611,7 @@ export function WorldCupDashboard() {
             className="globe"
             viewBox="0 0 720 720"
             role="img"
-            aria-label="2026 世界杯国家状态地球仪"
+            aria-label={text.globeAlt}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
             onPointerUp={onPointerUp}
@@ -468,57 +631,59 @@ export function WorldCupDashboard() {
                   className={name ? "country clickable-country" : "country"}
                   data-country={name}
                 >
-                  <title>{name}</title>
+                  <title>{regionLabel(name, language)}</title>
                 </path>
               );
             })}
-            {visibleMarkers.map(({ team, x, y }) => (
-              <g key={team.name}>
+            {visibleMarkers.map(({ association, x, y }) => {
+              const markerStatus = statusForCountry(association.name);
+              const selected = association.name === selectedTeam;
+              return (
+              <g key={association.name}>
                 <circle
                   cx={x}
                   cy={y}
-                  r={15}
+                  r={14}
                   className="team-hit"
-                  data-team={team.name}
+                  data-team={association.name}
                 />
                 <circle
                   cx={x}
                   cy={y}
-                  r={team.name === selectedTeam ? 7 : 4}
-                  className={team.name === selectedTeam ? "team-dot selected" : "team-dot"}
-                  data-team={team.name}
+                  r={selected ? 7 : 4.5}
+                  className={`team-dot ${markerStatus}${selected ? " selected" : ""}`}
+                  data-team={association.name}
                 />
-                <title>{team.name}</title>
+                <title>{regionLabel(association.name, language)}</title>
               </g>
-            ))}
+              );
+            })}
           </svg>
         </div>
 
         <aside className="detail-panel">
           <div className="panel-title">
             <div>
-              <h2>{selectedTeam}</h2>
+              <h2>{regionLabel(selectedTeam, language)}</h2>
               <p>
                 {selectedTournamentTeam
-                  ? `${selectedTournamentTeam.confed} · ${selectedTournamentTeam.group} 组`
-                  : selectedRecord?.confed ?? "主数据未覆盖"}
+                  ? `${selectedTournamentTeam.confed} · ${groupLabel(selectedTournamentTeam.group, language)}`
+                  : selectedRecord?.confed ?? text.unknown}
               </p>
             </div>
             <span className={`status-pill ${selectedStatus}`}>
-              {selectedStatus === "finals"
-                ? "决赛圈"
-                : selectedStatus === "eliminated"
-                  ? "预选赛"
-                  : "未覆盖"}
+              {statusLabel(selectedStatus, language)}
             </span>
           </div>
 
           <div className="status-summary">
             <Trophy size={18} aria-hidden="true" />
             <span>
-              {selectedTournamentTeam?.currentStatus ??
-                selectedRecord?.stage ??
-                "这个国家/地区可以在地球仪上选中，但当前数据集没有精确到它的 2026 世界杯资格赛阶段。"}
+              {selectedTournamentTeam?.currentStatus
+                ? stageLabel(selectedTournamentTeam.currentStatus, language)
+                : selectedRecord?.stage
+                  ? stageLabel(selectedRecord.stage, language)
+                  : text.latestDataGap}
             </span>
           </div>
 
@@ -526,15 +691,15 @@ export function WorldCupDashboard() {
             <>
               <div className="detail-grid">
                 <div>
-                  <small>小组排名</small>
+                  <small>{text.position}</small>
                   <strong>{selectedGroupPosition ? `${selectedGroupPosition}` : "—"}</strong>
                 </div>
                 <div>
-                  <small>球队代码</small>
+                  <small>{text.code}</small>
                   <strong>{selectedTournamentTeam.code}</strong>
                 </div>
                 <div>
-                  <small>下一场</small>
+                  <small>{text.nextMatch}</small>
                   <strong>{selectedNext ? selectedNext.date.slice(5) : "—"}</strong>
                 </div>
               </div>
@@ -544,7 +709,8 @@ export function WorldCupDashboard() {
                   <div className="match-row" key={`${match.date}-${match.home}-${match.away}`}>
                     <span>{match.date.slice(5)}</span>
                     <strong>
-                      {match.home} {scoreLabel(match)} {match.away}
+                      {compactRegionLabel(match.home, language)} {scoreLabel(match, language)}{" "}
+                      {compactRegionLabel(match.away, language)}
                     </strong>
                     <small>{match.venue}</small>
                   </div>
@@ -552,7 +718,9 @@ export function WorldCupDashboard() {
               </div>
             </>
           ) : (
-            <p className="data-note">{selectedRecord?.stage ?? "该国家/协会未在当前资格赛主表中定位。"}</p>
+            <p className="data-note">
+              {selectedRecord?.stage ? stageLabel(selectedRecord.stage, language) : text.dataMissing}
+            </p>
           )}
         </aside>
       </section>
@@ -563,11 +731,11 @@ export function WorldCupDashboard() {
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="搜索球队、洲际足联或阶段"
+            placeholder={text.search}
           />
         </label>
-        <div className="segmented" aria-label="状态过滤">
-          {(Object.keys(statusLabels) as Array<keyof typeof statusLabels>).map((key) => (
+        <div className="segmented" aria-label={language === "zh" ? "状态过滤" : "Status filter"}>
+          {statusKeys.map((key) => (
             <button
               key={key}
               type="button"
@@ -575,7 +743,7 @@ export function WorldCupDashboard() {
               onClick={() => setStatusFilter(key)}
             >
               <Filter size={15} aria-hidden="true" />
-              {statusLabels[key]}
+              {text[key]}
             </button>
           ))}
         </div>
@@ -585,8 +753,8 @@ export function WorldCupDashboard() {
         <div className="standings-panel">
           <div className="panel-title">
             <div>
-              <h2>小组积分</h2>
-              <p>{activeGroup} 组</p>
+              <h2>{text.standings}</h2>
+              <p>{groupLabel(activeGroup, language)}</p>
             </div>
             <div className="group-tabs">
               {groupLetters.map((group) => (
@@ -605,19 +773,19 @@ export function WorldCupDashboard() {
             <table>
               <thead>
                 <tr>
-                  <th>队</th>
-                  <th>赛</th>
-                  <th>胜</th>
-                  <th>平</th>
-                  <th>负</th>
-                  <th>净</th>
-                  <th>分</th>
+                  <th>{text.team}</th>
+                  <th>{text.played}</th>
+                  <th>{text.won}</th>
+                  <th>{text.drawn}</th>
+                  <th>{text.lost}</th>
+                  <th>{text.gd}</th>
+                  <th>{text.points}</th>
                 </tr>
               </thead>
               <tbody>
                 {calculateStandings(activeGroup).map((row) => (
                   <tr key={row.team} onClick={() => selectTeam(row.team)}>
-                    <td>{row.team}</td>
+                    <td>{compactRegionLabel(row.team, language)}</td>
                     <td>{row.played}</td>
                     <td>{row.won}</td>
                     <td>{row.drawn}</td>
@@ -636,8 +804,8 @@ export function WorldCupDashboard() {
         <div className="records-panel">
           <div className="panel-title">
             <div>
-              <h2>全部状态</h2>
-              <p>{filteredRows.length} 条</p>
+              <h2>{text.recordList}</h2>
+              <p>{filteredRows.length} {text.rows}</p>
             </div>
             <CalendarDays size={18} aria-hidden="true" />
           </div>
@@ -649,9 +817,13 @@ export function WorldCupDashboard() {
                 className="record-row"
                 onClick={() => selectTeam(row.team)}
               >
-                <span>{row.team}</span>
+                <span>{regionLabel(row.team, language)}</span>
                 <small>{row.confed || row.tournament?.confed || "—"}</small>
-                <strong>{row.tournament ? `${row.tournament.group} 组` : row.stage}</strong>
+                <strong>
+                  {row.tournament
+                    ? groupLabel(row.tournament.group, language)
+                    : stageLabel(row.stage, language)}
+                </strong>
               </button>
             ))}
           </div>
@@ -661,8 +833,8 @@ export function WorldCupDashboard() {
       <section className="knockout-panel">
         <div className="panel-title">
           <div>
-            <h2>淘汰赛对阵图</h2>
-            <p>比赛编号 73-104；时间为场馆当地时间，未定席位以小组名或胜者编号显示</p>
+            <h2>{text.bracket}</h2>
+            <p>{text.bracketHint}</p>
           </div>
           <GitBranch size={20} aria-hidden="true" />
         </div>
@@ -670,7 +842,7 @@ export function WorldCupDashboard() {
           <div className="bracket-grid tree-bracket">
             {bracketByRound.map(({ round, matches: roundMatches }) => (
               <section className="bracket-column" key={round}>
-                <h3>{knockoutRoundLabels[round]}</h3>
+                <h3>{knockoutLabel(round, language)}</h3>
                 <div className="bracket-stack">
                   {roundMatches.map((match, index) => (
                     <article
@@ -682,9 +854,9 @@ export function WorldCupDashboard() {
                     >
                       <div className="match-id">Match {match.matchNumber}</div>
                       <div className="bracket-teams">
-                        <strong>{match.home}</strong>
+                        <strong>{compactRegionLabel(match.home, language)}</strong>
                         <span>vs</span>
-                        <strong>{match.away}</strong>
+                        <strong>{compactRegionLabel(match.away, language)}</strong>
                       </div>
                       <div className="bracket-meta">
                         <span>
@@ -705,13 +877,13 @@ export function WorldCupDashboard() {
           {thirdPlaceMatch ? (
             <article className="third-place-card">
               <div>
-                <h3>{knockoutRoundLabels["Third place"]}</h3>
+                <h3>{knockoutLabel("Third place", language)}</h3>
                 <div className="match-id">Match {thirdPlaceMatch.matchNumber}</div>
               </div>
               <div className="bracket-teams">
-                <strong>{thirdPlaceMatch.home}</strong>
+                <strong>{compactRegionLabel(thirdPlaceMatch.home, language)}</strong>
                 <span>vs</span>
-                <strong>{thirdPlaceMatch.away}</strong>
+                <strong>{compactRegionLabel(thirdPlaceMatch.away, language)}</strong>
               </div>
               <div className="bracket-meta">
                 <span>
@@ -731,7 +903,7 @@ export function WorldCupDashboard() {
       <footer className="source-bar">
         <div>
           {dataFreshness.notes.map((note) => (
-            <p key={note}>{note}</p>
+            <p key={note}>{language === "zh" ? note : stageLabel(note, language)}</p>
           ))}
         </div>
         <div className="source-links">

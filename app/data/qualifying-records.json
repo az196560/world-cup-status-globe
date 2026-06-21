@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21",
+  "generatedAt": "2026-06-20",
   "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
   "records": [
     {
@@ -42,28 +42,19 @@
       "team": "Bhutan",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Hong Kong 淘汰"
     },
     {
       "team": "Brunei",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Indonesia 淘汰"
     },
     {
       "team": "Cambodia",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Pakistan 淘汰"
     },
     {
       "team": "China",
@@ -78,7 +69,7 @@
       "team": "Chinese Taipei",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第二轮 Group D 第4名淘汰",
+      "stage": "AFC 第二轮 Group D 第4名淘汰；FIFA 赛事使用 Chinese Taipei 名称",
       "group": "Group D",
       "position": 4,
       "points": 0
@@ -87,10 +78,7 @@
       "team": "Guam",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Singapore 淘汰"
     },
     {
       "team": "Hong Kong",
@@ -177,10 +165,7 @@
       "team": "Laos",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Nepal 淘汰"
     },
     {
       "team": "Lebanon",
@@ -195,10 +180,7 @@
       "team": "Macau",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Myanmar 淘汰"
     },
     {
       "team": "Malaysia",
@@ -213,19 +195,13 @@
       "team": "Maldives",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Bangladesh 淘汰"
     },
     {
       "team": "Mongolia",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Afghanistan 淘汰"
     },
     {
       "team": "Myanmar",
@@ -243,7 +219,7 @@
       "stage": "AFC 第二轮 Group H 第4名淘汰",
       "group": "Group H",
       "position": 4,
-      "points": 1
+      "points": 0
     },
     {
       "team": "North Korea",
@@ -253,6 +229,12 @@
       "group": "Group A",
       "position": 6,
       "points": 3
+    },
+    {
+      "team": "Northern Mariana Islands",
+      "confed": "AFC",
+      "status": "not_entered",
+      "stage": "不是 FIFA 成员；AFC 曾可通过 2027 亚洲杯资格赛路径参赛，但未进入 2026 世界杯预选赛抽签"
     },
     {
       "team": "Oman",
@@ -330,10 +312,7 @@
       "team": "Sri Lanka",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Yemen 淘汰；赛前曾被 FIFA 暂停，后有条件恢复参赛"
     },
     {
       "team": "Syria",
@@ -366,10 +345,7 @@
       "team": "Timor-Leste",
       "confed": "AFC",
       "status": "eliminated",
-      "stage": "AFC 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "AFC 第一轮负于 Chinese Taipei 淘汰"
     },
     {
       "team": "Turkmenistan",
@@ -534,15 +510,6 @@
       "points": 26
     },
     {
-      "team": "DR Congo",
-      "confed": "CAF",
-      "status": "qualified",
-      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group B第2名晋级",
-      "group": "Group B",
-      "position": 2,
-      "points": 22
-    },
-    {
       "team": "Djibouti",
       "confed": "CAF",
       "status": "eliminated",
@@ -550,6 +517,15 @@
       "group": "Group A",
       "position": 6,
       "points": 1
+    },
+    {
+      "team": "DR Congo",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group B第2名晋级",
+      "group": "Group B",
+      "position": 2,
+      "points": 22
     },
     {
       "team": "Egypt",
@@ -572,11 +548,8 @@
     {
       "team": "Eritrea",
       "confed": "CAF",
-      "status": "eliminated",
-      "stage": "CAF 第一轮Group E第6名淘汰",
-      "group": "Group E",
-      "position": 6,
-      "points": 0
+      "status": "not_entered",
+      "stage": "未参加 2026 世界杯预选赛：厄立特里亚足协在赛前退出，FIFA/CAF 确认其所有比赛取消"
     },
     {
       "team": "Eswatini",
@@ -777,6 +750,15 @@
       "points": 11
     },
     {
+      "team": "São Tomé and Príncipe",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group H第6名淘汰",
+      "group": "Group H",
+      "position": 6,
+      "points": 3
+    },
+    {
       "team": "Senegal",
       "confed": "CAF",
       "status": "qualified",
@@ -840,15 +822,6 @@
       "points": 13
     },
     {
-      "team": "São Tomé and Príncipe",
-      "confed": "CAF",
-      "status": "eliminated",
-      "stage": "CAF 第一轮Group H第6名淘汰",
-      "group": "Group H",
-      "position": 6,
-      "points": 3
-    },
-    {
       "team": "Tanzania",
       "confed": "CAF",
       "status": "eliminated",
@@ -909,52 +882,42 @@
       "stage": "CONCACAF 第二轮 Group F 第5名淘汰",
       "group": "Group F",
       "position": 5,
-      "points": 0
+      "points": null
     },
     {
       "team": "Antigua and Barbuda",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group A 第5名淘汰",
-      "group": "Group A",
-      "position": 5,
-      "points": 1
+      "stage": "CONCACAF 第二轮 Group A 小组赛淘汰",
+      "group": "Group A"
     },
     {
       "team": "Aruba",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group C 第4名淘汰",
-      "group": "Group C",
-      "position": 4,
-      "points": 2
+      "stage": "CONCACAF 第二轮 Group C 小组赛淘汰",
+      "group": "Group C"
     },
     {
       "team": "Bahamas",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group B 第5名淘汰",
-      "group": "Group B",
-      "position": 5,
-      "points": 0
+      "stage": "CONCACAF 第二轮 Group B 小组赛淘汰",
+      "group": "Group B"
     },
     {
       "team": "Barbados",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group C 第5名淘汰",
-      "group": "Group C",
-      "position": 5,
-      "points": 1
+      "stage": "CONCACAF 第二轮 Group C 小组赛淘汰",
+      "group": "Group C"
     },
     {
       "team": "Belize",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group D 第5名淘汰",
-      "group": "Group D",
-      "position": 5,
-      "points": 0
+      "stage": "CONCACAF 第二轮 Group D 小组赛淘汰",
+      "group": "Group D"
     },
     {
       "team": "Bermuda",
@@ -972,7 +935,7 @@
       "stage": "CONCACAF 第二轮 Group E 第5名淘汰",
       "group": "Group E",
       "position": 5,
-      "points": 0
+      "points": null
     },
     {
       "team": "Canada",
@@ -987,10 +950,8 @@
       "team": "Cayman Islands",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group A 第4名淘汰",
-      "group": "Group A",
-      "position": 4,
-      "points": 3
+      "stage": "CONCACAF 第二轮 Group A 小组赛淘汰",
+      "group": "Group A"
     },
     {
       "team": "Costa Rica",
@@ -1005,10 +966,8 @@
       "team": "Cuba",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group A 第3名淘汰",
-      "group": "Group A",
-      "position": 3,
-      "points": 6
+      "stage": "CONCACAF 第二轮 Group A 小组赛淘汰",
+      "group": "Group A"
     },
     {
       "team": "Curaçao",
@@ -1023,19 +982,15 @@
       "team": "Dominica",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group E 第4名淘汰",
-      "group": "Group E",
-      "position": 4,
-      "points": 3
+      "stage": "CONCACAF 第二轮 Group E 小组赛淘汰",
+      "group": "Group E"
     },
     {
       "team": "Dominican Republic",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group E 第3名淘汰",
-      "group": "Group E",
-      "position": 3,
-      "points": 6
+      "stage": "CONCACAF 第二轮 Group D 小组赛淘汰",
+      "group": "Group D"
     },
     {
       "team": "El Salvador",
@@ -1050,10 +1005,8 @@
       "team": "Grenada",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group B 第3名淘汰",
-      "group": "Group B",
-      "position": 3,
-      "points": 7
+      "stage": "CONCACAF 第二轮 Group B 小组赛淘汰",
+      "group": "Group B"
     },
     {
       "team": "Guatemala",
@@ -1068,10 +1021,8 @@
       "team": "Guyana",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group D 第3名淘汰",
-      "group": "Group D",
-      "position": 3,
-      "points": 6
+      "stage": "CONCACAF 第二轮 Group D 小组赛淘汰",
+      "group": "Group D"
     },
     {
       "team": "Haiti",
@@ -1113,10 +1064,8 @@
       "team": "Montserrat",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group D 第4名淘汰",
-      "group": "Group D",
-      "position": 4,
-      "points": 3
+      "stage": "CONCACAF 第二轮 Group D 小组赛淘汰",
+      "group": "Group D"
     },
     {
       "team": "Nicaragua",
@@ -1140,37 +1089,29 @@
       "team": "Puerto Rico",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group F 第3名淘汰",
-      "group": "Group F",
-      "position": 3,
-      "points": 7
+      "stage": "CONCACAF 第二轮 Group F 小组赛淘汰",
+      "group": "Group F"
     },
     {
       "team": "Saint Kitts and Nevis",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group B 第4名淘汰",
-      "group": "Group B",
-      "position": 4,
-      "points": 3
+      "stage": "CONCACAF 第二轮 Group B 小组赛淘汰",
+      "group": "Group B"
     },
     {
       "team": "Saint Lucia",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group C 第3名淘汰",
-      "group": "Group C",
-      "position": 3,
-      "points": 4
+      "stage": "CONCACAF 第二轮 Group C 小组赛淘汰",
+      "group": "Group C"
     },
     {
       "team": "Saint Vincent and the Grenadines",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第二轮 Group F 第4名淘汰",
-      "group": "Group F",
-      "position": 4,
-      "points": 3
+      "stage": "CONCACAF 第二轮 Group F 小组赛淘汰",
+      "group": "Group F"
     },
     {
       "team": "Suriname",
@@ -1194,19 +1135,13 @@
       "team": "Turks and Caicos Islands",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "CONCACAF 第一轮负于 Anguilla 淘汰"
     },
     {
       "team": "U.S. Virgin Islands",
       "confed": "CONCACAF",
       "status": "eliminated",
-      "stage": "CONCACAF 第一轮两回合附加赛淘汰",
-      "group": "First round",
-      "position": null,
-      "points": null
+      "stage": "CONCACAF 第一轮负于 British Virgin Islands 淘汰"
     },
     {
       "team": "United States",
@@ -1794,6 +1729,12 @@
       "points": 13
     },
     {
+      "team": "Russia",
+      "confed": "UEFA",
+      "status": "not_entered",
+      "stage": "未参加 2026 世界杯预选赛：FIFA/UEFA 自 2022 年起暂停俄罗斯国家队参加旗下赛事"
+    },
+    {
       "team": "San Marino",
       "confed": "UEFA",
       "status": "eliminated",
@@ -2136,13 +2077,8 @@
     }
   ],
   "notes": [
-    "资格赛数据由 Wikipedia 2026 FIFA World Cup qualification 主页面及 AFC、CONCACAF 各洲预选赛页面表格抽取。",
-    "AFC 已补入第一轮、第二轮出局队；CONCACAF 已补入第一轮、第二轮出局队；后续阶段记录优先保留更高阶段结果。",
-    "少数未参赛、被禁赛、退赛或非 FIFA 成员的国家/地区不在参赛记录内。"
-  ],
-  "sourceUrls": [
-    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
-    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(AFC)",
-    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONCACAF)"
+    "资格赛数据由 Wikipedia/FIFA/各洲足联赛程页整理；AFC 与 CONCACAF 早轮淘汰队已补录到总表。",
+    "未参加状态用于主办国自动晋级、俄罗斯被 FIFA/UEFA 暂停、厄立特里亚退赛、北马里亚纳群岛非 FIFA 成员等情况。",
+    "地图上的小岛、海外地区和英国四协会使用协会锚点显示；世界地图底图本身不一定有独立国家面。"
   ]
 }

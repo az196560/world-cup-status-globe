@@ -115,7 +115,8 @@ small {
 }
 
 .metric-strip div,
-.detail-grid div {
+.detail-grid div,
+.language-toggle {
   display: grid;
   gap: 3px;
   min-height: 72px;
@@ -123,6 +124,19 @@ small {
   border-radius: 8px;
   padding: 12px;
   background: rgba(255, 255, 255, 0.72);
+}
+
+.language-toggle {
+  grid-column: 1 / -1;
+  place-items: center;
+  color: var(--teal-dark);
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.language-toggle:hover {
+  border-color: var(--teal);
+  background: #f4fbfb;
 }
 
 .metric-strip span,
@@ -232,6 +246,22 @@ small {
   pointer-events: none;
 }
 
+.team-dot.finals {
+  fill: var(--teal);
+}
+
+.team-dot.eliminated {
+  fill: #d46a6a;
+}
+
+.team-dot.not_entered {
+  fill: #8f7bd8;
+}
+
+.team-dot.unknown {
+  fill: #aab4c1;
+}
+
 .team-hit {
   fill: transparent;
   cursor: pointer;
@@ -277,6 +307,11 @@ small {
 .status-pill.unknown {
   background: rgba(97, 112, 107, 0.14);
   color: var(--muted);
+}
+
+.status-pill.not_entered {
+  background: rgba(143, 123, 216, 0.16);
+  color: #5c48a8;
 }
 
 .status-summary {

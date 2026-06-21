@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "2026 世界杯状态地球仪",
-  description: "查看 2026 世界杯决赛圈和资格赛状态的交互式地球仪。",
+  title: "2026 World Cup Status Globe",
+  description: "2026 World Cup status globe with bilingual country and qualifying data.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

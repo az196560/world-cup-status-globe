@@ -1,0 +1,49 @@
+{
+  "scan_interval_minutes": 60,
+  "lookahead_days": 330,
+  "email": {
+    "enabled": false,
+    "from": "alerts@example.com",
+    "to": ["you@example.com"]
+  },
+  "programs": [
+    "aeroplan",
+    "alaska",
+    "lifemiles",
+    "united",
+    "virgin_atlantic",
+    "american",
+    "delta"
+  ],
+  "routes": [
+    {
+      "name": "US West Coast to Tokyo",
+      "origins": ["SFO", "LAX", "SEA"],
+      "destinations": ["HND", "NRT"],
+      "programs": ["aeroplan", "alaska", "united", "american", "delta"],
+      "start_date": "2026-07-01",
+      "end_date": "2026-12-31",
+      "cabins": ["business", "first"],
+      "allow_short_haul_economy": true,
+      "max_economy_distance_miles": 800,
+      "max_points": 120000,
+      "min_seats": 1,
+      "active": true
+    },
+    {
+      "name": "US East Coast to London",
+      "origins": ["JFK", "BOS", "IAD"],
+      "destinations": ["LHR"],
+      "programs": ["virgin_atlantic", "aeroplan", "american", "delta", "united"],
+      "start_date": "2026-07-01",
+      "end_date": "2026-12-31",
+      "cabins": ["business", "first"],
+      "allow_short_haul_economy": true,
+      "max_economy_distance_miles": 800,
+      "max_points": 100000,
+      "min_seats": 1,
+      "active": true
+    }
+  ]
+}
+

@@ -8,6 +8,14 @@ export type TournamentTeam = {
   currentStatus?: string;
 };
 
+export type AssociationPoint = {
+  name: string;
+  confed: string;
+  lat: number;
+  lon: number;
+  label?: string;
+};
+
 export type Match = {
   group: string;
   date: string;
@@ -37,8 +45,8 @@ export const dataFreshness = {
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
-    "资格赛阶段来自 Wikipedia 主页面及 AFC、CONCACAF 各洲预选赛页面表格；已覆盖 210 支参赛队。",
-    "少数未参赛、被禁赛、退赛或非 FIFA 成员的国家/地区不在参赛记录内。",
+    "资格赛阶段来自 Wikipedia 的 2026 FIFA World Cup qualification 页面表格。",
+    "早期资格赛轮次未在主表完整列出的协会，会在总表里标为资料未精确到轮次。",
   ],
 };
 
@@ -52,14 +60,6 @@ export const sources = [
     url: "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
   },
   {
-    label: "Wikipedia AFC qualification",
-    url: "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(AFC)",
-  },
-  {
-    label: "Wikipedia CONCACAF qualification",
-    url: "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONCACAF)",
-  },
-  {
     label: "FIFA World Cup 26 match centre",
     url: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   },
@@ -67,14 +67,22 @@ export const sources = [
     label: "Wikipedia 2026 FIFA World Cup knockout stage",
     url: "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
   },
+  {
+    label: "FIFA/CAF statement on Eritrea withdrawal",
+    url: "https://inside.fifa.com/tournaments/mens/worldcup/canadamexicousa2026/news/statement-on-fifa-world-cup-2026-tm-preliminary-competition",
+  },
+  {
+    label: "FIFA/UEFA statement on Russia suspension",
+    url: "https://inside.fifa.com/media-releases/fifa-uefa-suspend-russian-clubs-and-national-teams-from-all-competitions",
+  },
 ];
 
 export const teams: TournamentTeam[] = [
-  { name: "Mexico", code: "MEX", group: "A", confed: "CONCACAF", lat: 23.6, lon: -102.5, currentStatus: "A 组 2 战 6 分，已锁定小组第一并晋级 32 强" },
+  { name: "Mexico", code: "MEX", group: "A", confed: "CONCACAF", lat: 23.6, lon: -102.5, currentStatus: "主办国自动晋级，未参加 CONCACAF 预选赛；A 组 2 战 6 分，已锁定小组第一并晋级 32 强" },
   { name: "South Korea", code: "KOR", group: "A", confed: "AFC", lat: 36.4, lon: 127.8 },
   { name: "Czechia", code: "CZE", group: "A", confed: "UEFA", lat: 49.8, lon: 15.5 },
   { name: "South Africa", code: "RSA", group: "A", confed: "CAF", lat: -30.6, lon: 22.9 },
-  { name: "Canada", code: "CAN", group: "B", confed: "CONCACAF", lat: 56.1, lon: -106.3 },
+  { name: "Canada", code: "CAN", group: "B", confed: "CONCACAF", lat: 56.1, lon: -106.3, currentStatus: "主办国自动晋级，未参加 CONCACAF 预选赛" },
   { name: "Qatar", code: "QAT", group: "B", confed: "AFC", lat: 25.3, lon: 51.2 },
   { name: "Switzerland", code: "SUI", group: "B", confed: "UEFA", lat: 46.8, lon: 8.2 },
   { name: "Bosnia and Herzegovina", code: "BIH", group: "B", confed: "UEFA", lat: 44.2, lon: 17.7 },
@@ -82,7 +90,7 @@ export const teams: TournamentTeam[] = [
   { name: "Haiti", code: "HAI", group: "C", confed: "CONCACAF", lat: 19.0, lon: -72.3, currentStatus: "C 组 0 分，已被淘汰" },
   { name: "Scotland", code: "SCO", group: "C", confed: "UEFA", lat: 56.5, lon: -4.2 },
   { name: "Morocco", code: "MAR", group: "C", confed: "CAF", lat: 31.8, lon: -7.1 },
-  { name: "United States", code: "USA", group: "D", confed: "CONCACAF", lat: 39.8, lon: -98.6, currentStatus: "D 组 2 战 6 分，已锁定小组第一并晋级 32 强" },
+  { name: "United States", code: "USA", group: "D", confed: "CONCACAF", lat: 39.8, lon: -98.6, currentStatus: "主办国自动晋级，未参加 CONCACAF 预选赛；D 组 2 战 6 分，已锁定小组第一并晋级 32 强" },
   { name: "Paraguay", code: "PAR", group: "D", confed: "CONMEBOL", lat: -23.4, lon: -58.4 },
   { name: "Australia", code: "AUS", group: "D", confed: "AFC", lat: -25.3, lon: 133.8 },
   { name: "Türkiye", code: "TUR", group: "D", confed: "UEFA", lat: 39.0, lon: 35.2, currentStatus: "D 组 0 分，已被淘汰" },
@@ -119,6 +127,89 @@ export const teams: TournamentTeam[] = [
   { name: "Ghana", code: "GHA", group: "L", confed: "CAF", lat: 7.9, lon: -1.0 },
   { name: "Panama", code: "PAN", group: "L", confed: "CONCACAF", lat: 8.5, lon: -80.8 },
 ];
+
+const extraAssociationPoints: AssociationPoint[] = [
+  { name: "Wales", confed: "UEFA", lat: 52.3, lon: -3.8 },
+  { name: "Northern Ireland", confed: "UEFA", lat: 54.7, lon: -6.8 },
+  { name: "North Macedonia", confed: "UEFA", lat: 41.6, lon: 21.7 },
+  { name: "Faroe Islands", confed: "UEFA", lat: 62.0, lon: -6.8 },
+  { name: "Gibraltar", confed: "UEFA", lat: 36.1, lon: -5.4 },
+  { name: "Kosovo", confed: "UEFA", lat: 42.6, lon: 20.9 },
+  { name: "Russia", confed: "UEFA", lat: 61.5, lon: 105.3 },
+  { name: "Hong Kong", confed: "AFC", lat: 22.3, lon: 114.2 },
+  { name: "Macau", confed: "AFC", lat: 22.2, lon: 113.5 },
+  { name: "Chinese Taipei", confed: "AFC", lat: 23.8, lon: 121.0, label: "Chinese Taipei / Taiwan" },
+  { name: "Guam", confed: "AFC", lat: 13.4, lon: 144.8 },
+  { name: "Northern Mariana Islands", confed: "AFC", lat: 15.2, lon: 145.7 },
+  { name: "Sri Lanka", confed: "AFC", lat: 7.9, lon: 80.7 },
+  { name: "Afghanistan", confed: "AFC", lat: 33.9, lon: 67.7 },
+  { name: "Bangladesh", confed: "AFC", lat: 23.7, lon: 90.4 },
+  { name: "Bhutan", confed: "AFC", lat: 27.5, lon: 90.4 },
+  { name: "Brunei", confed: "AFC", lat: 4.5, lon: 114.7 },
+  { name: "Cambodia", confed: "AFC", lat: 12.6, lon: 104.9 },
+  { name: "India", confed: "AFC", lat: 22.4, lon: 79.0 },
+  { name: "Laos", confed: "AFC", lat: 19.9, lon: 102.5 },
+  { name: "Lebanon", confed: "AFC", lat: 33.9, lon: 35.9 },
+  { name: "Malaysia", confed: "AFC", lat: 4.2, lon: 102.0 },
+  { name: "Maldives", confed: "AFC", lat: 3.2, lon: 73.2 },
+  { name: "Mongolia", confed: "AFC", lat: 46.9, lon: 103.8 },
+  { name: "Myanmar", confed: "AFC", lat: 21.9, lon: 96.0 },
+  { name: "Nepal", confed: "AFC", lat: 28.4, lon: 84.1 },
+  { name: "Pakistan", confed: "AFC", lat: 30.4, lon: 69.3 },
+  { name: "Philippines", confed: "AFC", lat: 12.9, lon: 121.8 },
+  { name: "Singapore", confed: "AFC", lat: 1.35, lon: 103.8 },
+  { name: "Syria", confed: "AFC", lat: 35.0, lon: 38.5 },
+  { name: "Tajikistan", confed: "AFC", lat: 38.9, lon: 71.0 },
+  { name: "Thailand", confed: "AFC", lat: 15.9, lon: 101.0 },
+  { name: "Timor-Leste", confed: "AFC", lat: -8.8, lon: 125.7 },
+  { name: "Turkmenistan", confed: "AFC", lat: 39.1, lon: 59.6 },
+  { name: "Vietnam", confed: "AFC", lat: 16.2, lon: 107.8 },
+  { name: "Yemen", confed: "AFC", lat: 15.6, lon: 48.5 },
+  { name: "Anguilla", confed: "CONCACAF", lat: 18.2, lon: -63.1 },
+  { name: "Antigua and Barbuda", confed: "CONCACAF", lat: 17.1, lon: -61.8 },
+  { name: "Aruba", confed: "CONCACAF", lat: 12.5, lon: -69.97 },
+  { name: "Bahamas", confed: "CONCACAF", lat: 25.0, lon: -77.4 },
+  { name: "Barbados", confed: "CONCACAF", lat: 13.2, lon: -59.5 },
+  { name: "Belize", confed: "CONCACAF", lat: 17.2, lon: -88.5 },
+  { name: "British Virgin Islands", confed: "CONCACAF", lat: 18.4, lon: -64.6 },
+  { name: "Cayman Islands", confed: "CONCACAF", lat: 19.3, lon: -81.3 },
+  { name: "Cuba", confed: "CONCACAF", lat: 21.5, lon: -79.5 },
+  { name: "Dominica", confed: "CONCACAF", lat: 15.4, lon: -61.4 },
+  { name: "Dominican Republic", confed: "CONCACAF", lat: 18.7, lon: -70.2 },
+  { name: "Grenada", confed: "CONCACAF", lat: 12.1, lon: -61.7 },
+  { name: "Guyana", confed: "CONCACAF", lat: 5.0, lon: -58.9 },
+  { name: "Montserrat", confed: "CONCACAF", lat: 16.7, lon: -62.2 },
+  { name: "Puerto Rico", confed: "CONCACAF", lat: 18.2, lon: -66.5 },
+  { name: "Saint Kitts and Nevis", confed: "CONCACAF", lat: 17.3, lon: -62.8 },
+  { name: "Saint Lucia", confed: "CONCACAF", lat: 13.9, lon: -61.0 },
+  { name: "Saint Vincent and the Grenadines", confed: "CONCACAF", lat: 13.3, lon: -61.2 },
+  { name: "Turks and Caicos Islands", confed: "CONCACAF", lat: 21.7, lon: -71.8 },
+  { name: "U.S. Virgin Islands", confed: "CONCACAF", lat: 18.3, lon: -64.9 },
+  { name: "American Samoa", confed: "OFC", lat: -14.3, lon: -170.7 },
+  { name: "Cook Islands", confed: "OFC", lat: -21.2, lon: -159.8 },
+  { name: "New Caledonia", confed: "OFC", lat: -21.5, lon: 165.6 },
+  { name: "Papua New Guinea", confed: "OFC", lat: -6.3, lon: 147.0 },
+  { name: "Samoa", confed: "OFC", lat: -13.8, lon: -172.1 },
+  { name: "Solomon Islands", confed: "OFC", lat: -9.6, lon: 160.2 },
+  { name: "Tahiti", confed: "OFC", lat: -17.7, lon: -149.4 },
+  { name: "Tonga", confed: "OFC", lat: -21.2, lon: -175.2 },
+  { name: "Vanuatu", confed: "OFC", lat: -15.4, lon: 166.9 },
+];
+
+export const associationMapPoints: AssociationPoint[] = Array.from(
+  new Map(
+    [...teams, ...extraAssociationPoints].map((item) => [
+      item.name,
+      {
+        name: item.name,
+        confed: item.confed,
+        lat: item.lat,
+        lon: item.lon,
+        label: "label" in item ? item.label : undefined,
+      },
+    ]),
+  ).values(),
+);
 
 export const matches: Match[] = [
   { group: "A", date: "2026-06-11", home: "Mexico", away: "South Africa", homeScore: 2, awayScore: 0, venue: "Mexico City", status: "final" },
@@ -232,9 +323,15 @@ export const knockoutMatches: KnockoutMatch[] = [
 
 export const countryAliases: Record<string, string> = {
   "United States of America": "United States",
+  "United Kingdom": "England",
   "Czech Republic": "Czechia",
   "Côte d'Ivoire": "Côte d’Ivoire",
   "Ivory Coast": "Côte d’Ivoire",
+  Taiwan: "Chinese Taipei",
+  "Taiwan, Province of China": "Chinese Taipei",
+  "Hong Kong S.A.R.": "Hong Kong",
+  "Macao S.A.R": "Macau",
+  Macao: "Macau",
   Turkey: "Türkiye",
   "Bosnia and Herz.": "Bosnia and Herzegovina",
   "Dem. Rep. Congo": "DR Congo",

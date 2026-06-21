@@ -1,7 +1,8 @@
 # 2026 World Cup Status Globe
 
-Interactive Sites/Vinext website for browsing FIFA World Cup 26 team status on
-a globe.
+Interactive website for browsing FIFA World Cup 26 team status on a globe.
+
+Public site: <https://az196560.github.io/world-cup-status-globe/>
 
 ## What It Shows
 
@@ -12,9 +13,11 @@ a globe.
   fixtures, and current notes.
 - Knockout-stage bracket with match numbers, teams/placeholders, kickoff times,
   venues, and cities.
-- 210 parsed qualification records from the 2026 FIFA World Cup qualification
-  tables, including AFC and CONCACAF early-round eliminations.
-- Search and filters for finalists and eliminated teams.
+- 212 qualification records, including early AFC/CONCACAF rounds and selected
+  associations that did not enter qualifying.
+- Chinese and English UI modes, with flag emoji and bilingual country/region
+  names in the main views.
+- Search and filters for finalists, eliminated teams, and non-entered teams.
 
 Data is static and labeled as current through `2026-06-21`.
 
@@ -32,9 +35,10 @@ Open `http://localhost:3000`.
 ```bash
 npm run lint
 npm run build
+npm run build:pages
 ```
 
-The canonical Sites preview is `public/screenshot.jpeg`.
+The GitHub Pages build outputs to `dist-pages/`.
 
 ## Main Files
 
@@ -42,5 +46,8 @@ The canonical Sites preview is `public/screenshot.jpeg`.
   bracket/detail panels.
 - `app/data/worldCupData.ts`: World Cup group, match, knockout, country, and
   source data.
+- `app/data/regionMeta.ts`: flag emoji, region codes, and bilingual display
+  names.
 - `app/data/qualifying-records.json`: generated qualification-stage records.
+- `github-pages/`: static entry used by GitHub Pages.
 - `public/countries-110m.json`: bundled world topology used by the globe.

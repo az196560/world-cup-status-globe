@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Award Tickets Monitor</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Award Tickets Monitor</h1>
+        <p id="statusLine">Loading status...</p>
+      </div>
+      <button id="scanButton" type="button">Run Scan</button>
+    </header>
+
+    <main>
+      <section class="toolbar">
+        <label>
+          Origin set
+          <input id="origins" value="SFO,LAX,SEA" />
+        </label>
+        <label>
+          Destination set
+          <input id="destinations" value="HND,NRT" />
+        </label>
+        <label>
+          Start
+          <input id="startDate" type="date" />
+        </label>
+        <label>
+          End
+          <input id="endDate" type="date" />
+        </label>
+        <label>
+          Programs
+          <select id="programs" multiple size="7"></select>
+        </label>
+        <label>
+          Cabins
+          <select id="cabins" multiple size="3">
+            <option value="business" selected>Business</option>
+            <option value="first" selected>First</option>
+            <option value="economy">Economy</option>
+          </select>
+        </label>
+        <button id="searchButton" type="button">One-Off Search</button>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <div class="panelHeader">
+            <h2>Latest Availability</h2>
+            <span id="availabilityCount"></span>
+          </div>
+          <div class="tableWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Program</th>
+                  <th>Route</th>
+                  <th>Date</th>
+                  <th>Cabin</th>
+                  <th>Seats</th>
+                  <th>Points</th>
+                  <th>Taxes</th>
+                  <th>Carrier</th>
+                  <th>Seen</th>
+                </tr>
+              </thead>
+              <tbody id="availabilityBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="side">
+          <div class="panel">
+            <div class="panelHeader">
+              <h2>Routes</h2>
+              <span id="routeCount"></span>
+            </div>
+            <div id="routes"></div>
+          </div>
+          <div class="panel">
+            <div class="panelHeader">
+              <h2>Scan Runs</h2>
+            </div>
+            <div id="scanRuns"></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+
