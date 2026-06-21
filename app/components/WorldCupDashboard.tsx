@@ -34,6 +34,8 @@ import {
 } from "@/app/data/worldCupData";
 import {
   compactRegionLabel,
+  confedLabel,
+  confedName,
   regionLabel,
   regionName,
   type Language,
@@ -444,6 +446,8 @@ export function WorldCupDashboard() {
         zhName.includes(normalized) ||
         enName.includes(normalized) ||
         row.confed.toLowerCase().includes(normalized) ||
+        confedName(row.confed, "zh").toLowerCase().includes(normalized) ||
+        confedName(row.confed, "en").toLowerCase().includes(normalized) ||
         row.stage.toLowerCase().includes(normalized) ||
         stageLabel(row.stage, "en").toLowerCase().includes(normalized);
       const matchesStatus =
@@ -667,8 +671,10 @@ export function WorldCupDashboard() {
               <h2>{regionLabel(selectedTeam, language)}</h2>
               <p>
                 {selectedTournamentTeam
-                  ? `${selectedTournamentTeam.confed} · ${groupLabel(selectedTournamentTeam.group, language)}`
-                  : selectedRecord?.confed ?? text.unknown}
+                  ? `${confedLabel(selectedTournamentTeam.confed, language)} · ${groupLabel(selectedTournamentTeam.group, language)}`
+                  : selectedRecord?.confed
+                    ? confedLabel(selectedRecord.confed, language)
+                    : text.unknown}
               </p>
             </div>
             <span className={`status-pill ${selectedStatus}`}>
@@ -818,7 +824,7 @@ export function WorldCupDashboard() {
                 onClick={() => selectTeam(row.team)}
               >
                 <span>{regionLabel(row.team, language)}</span>
-                <small>{row.confed || row.tournament?.confed || "—"}</small>
+                <small>{confedLabel(row.confed || row.tournament?.confed || "", language) || "—"}</small>
                 <strong>
                   {row.tournament
                     ? groupLabel(row.tournament.group, language)

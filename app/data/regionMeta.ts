@@ -1,4 +1,5 @@
 export type Language = "zh" | "en";
+export type ConfederationCode = "AFC" | "CAF" | "CONCACAF" | "CONMEBOL" | "OFC" | "UEFA";
 
 type RegionOverride = {
   flag: string;
@@ -217,9 +218,9 @@ export const regionCodes: Record<string, string> = {
 };
 
 const overrides: Record<string, RegionOverride> = {
-  England: { flag: "🏴", zh: "英格兰", en: "England" },
-  Scotland: { flag: "🏴", zh: "苏格兰", en: "Scotland" },
-  Wales: { flag: "🏴", zh: "威尔士", en: "Wales" },
+  England: { flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}", zh: "英格兰", en: "England" },
+  Scotland: { flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}", zh: "苏格兰", en: "Scotland" },
+  Wales: { flag: "\u{1F3F4}\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}", zh: "威尔士", en: "Wales" },
   "Northern Ireland": { flag: "🇬🇧", zh: "北爱尔兰", en: "Northern Ireland" },
   "Chinese Taipei": { flag: "🇹🇼", zh: "中华台北 / 台湾", en: "Chinese Taipei / Taiwan" },
   Tahiti: { flag: "🇵🇫", zh: "塔希提 / 法属波利尼西亚", en: "Tahiti / French Polynesia" },
@@ -233,6 +234,18 @@ const overrides: Record<string, RegionOverride> = {
   "North Korea": { flag: "🇰🇵", zh: "朝鲜", en: "North Korea" },
   "South Korea": { flag: "🇰🇷", zh: "韩国", en: "South Korea" },
   "United States": { flag: "🇺🇸", zh: "美国", en: "United States" },
+};
+
+const confederations: Record<ConfederationCode, { zh: string; en: string }> = {
+  AFC: { zh: "亚洲足球联合会", en: "Asian Football Confederation" },
+  CAF: { zh: "非洲足球联合会", en: "Confederation of African Football" },
+  CONCACAF: {
+    zh: "中北美洲及加勒比海足球协会",
+    en: "Confederation of North, Central America and Caribbean Association Football",
+  },
+  CONMEBOL: { zh: "南美洲足球联合会", en: "South American Football Confederation" },
+  OFC: { zh: "大洋洲足球联合会", en: "Oceania Football Confederation" },
+  UEFA: { zh: "欧洲足球协会联盟", en: "Union of European Football Associations" },
 };
 
 function codeToFlag(code: string) {
@@ -275,3 +288,15 @@ export function compactRegionLabel(name: string, language: Language) {
   return `${regionFlag(name)} ${regionName(name, language)}`;
 }
 
+export function confedName(confed: string, language: Language) {
+  const metadata = confederations[confed as ConfederationCode];
+  return metadata?.[language] ?? confed;
+}
+
+export function confedLabel(confed: string, language: Language) {
+  const metadata = confederations[confed as ConfederationCode];
+  if (!metadata) return confed;
+  const primary = metadata[language];
+  const secondary = metadata[language === "zh" ? "en" : "zh"];
+  return `${confed} · ${primary} / ${secondary}`;
+}
