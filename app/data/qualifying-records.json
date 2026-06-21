@@ -1,0 +1,1709 @@
+{
+  "generatedAt": "2026-06-20",
+  "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
+  "records": [
+    {
+      "team": "Australia",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group C第2名，直接晋级",
+      "group": "Group C",
+      "position": 2,
+      "points": 19
+    },
+    {
+      "team": "Bahrain",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第三轮Group C第6名淘汰",
+      "group": "Group C",
+      "position": 6,
+      "points": 6
+    },
+    {
+      "team": "China",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第三轮Group C第5名淘汰",
+      "group": "Group C",
+      "position": 5,
+      "points": 9
+    },
+    {
+      "team": "Indonesia",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第四轮Group B第3名淘汰",
+      "group": "Group B",
+      "position": 3,
+      "points": 0
+    },
+    {
+      "team": "Iran",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group A第1名，直接晋级",
+      "group": "Group A",
+      "position": 1,
+      "points": 23
+    },
+    {
+      "team": "Iraq",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group B第3名，进入第四轮",
+      "group": "Group B",
+      "position": 3,
+      "points": 15
+    },
+    {
+      "team": "Japan",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group C第1名，直接晋级",
+      "group": "Group C",
+      "position": 1,
+      "points": 23
+    },
+    {
+      "team": "Jordan",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group B第2名，直接晋级",
+      "group": "Group B",
+      "position": 2,
+      "points": 16
+    },
+    {
+      "team": "Kuwait",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第三轮Group B第6名淘汰",
+      "group": "Group B",
+      "position": 6,
+      "points": 5
+    },
+    {
+      "team": "Kyrgyzstan",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第三轮Group A第5名淘汰",
+      "group": "Group A",
+      "position": 5,
+      "points": 8
+    },
+    {
+      "team": "North Korea",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第三轮Group A第6名淘汰",
+      "group": "Group A",
+      "position": 6,
+      "points": 3
+    },
+    {
+      "team": "Oman",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第四轮Group A第3名淘汰",
+      "group": "Group A",
+      "position": 3,
+      "points": 1
+    },
+    {
+      "team": "Palestine",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第三轮Group B第5名淘汰",
+      "group": "Group B",
+      "position": 5,
+      "points": 10
+    },
+    {
+      "team": "Qatar",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group A第4名，进入第四轮",
+      "group": "Group A",
+      "position": 4,
+      "points": 13
+    },
+    {
+      "team": "Saudi Arabia",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group C第3名，进入第四轮",
+      "group": "Group C",
+      "position": 3,
+      "points": 13
+    },
+    {
+      "team": "South Korea",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group B第1名，直接晋级",
+      "group": "Group B",
+      "position": 1,
+      "points": 22
+    },
+    {
+      "team": "United Arab Emirates",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第五轮附加赛总比分 2-3 负于伊拉克",
+      "group": "AFC play-off",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Uzbekistan",
+      "confed": "AFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；AFC 第三轮Group A第2名，直接晋级",
+      "group": "Group A",
+      "position": 2,
+      "points": 21
+    },
+    {
+      "team": "Algeria",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group G第1名晋级",
+      "group": "Group G",
+      "position": 1,
+      "points": 25
+    },
+    {
+      "team": "Angola",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group D第4名淘汰",
+      "group": "Group D",
+      "position": 4,
+      "points": 12
+    },
+    {
+      "team": "Benin",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group C第3名淘汰",
+      "group": "Group C",
+      "position": 3,
+      "points": 17
+    },
+    {
+      "team": "Botswana",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group G第5名淘汰",
+      "group": "Group G",
+      "position": 5,
+      "points": 10
+    },
+    {
+      "team": "Burkina Faso",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group A第2名淘汰",
+      "group": "Group A",
+      "position": 2,
+      "points": 21
+    },
+    {
+      "team": "Burundi",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group F第5名淘汰",
+      "group": "Group F",
+      "position": 5,
+      "points": 10
+    },
+    {
+      "team": "Cameroon",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第二轮附加赛淘汰",
+      "group": "Group D",
+      "position": 2,
+      "points": 19
+    },
+    {
+      "team": "Cape Verde",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group D第1名晋级",
+      "group": "Group D",
+      "position": 1,
+      "points": 23
+    },
+    {
+      "team": "Central African Republic",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group I第5名淘汰",
+      "group": "Group I",
+      "position": 5,
+      "points": 8
+    },
+    {
+      "team": "Chad",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group I第6名淘汰",
+      "group": "Group I",
+      "position": 6,
+      "points": 1
+    },
+    {
+      "team": "Comoros",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group I第4名淘汰",
+      "group": "Group I",
+      "position": 4,
+      "points": 15
+    },
+    {
+      "team": "Congo",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group E第5名淘汰",
+      "group": "Group E",
+      "position": 5,
+      "points": 1
+    },
+    {
+      "team": "Côte d’Ivoire",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group F第1名晋级",
+      "group": "Group F",
+      "position": 1,
+      "points": 26
+    },
+    {
+      "team": "DR Congo",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group B第2名晋级",
+      "group": "Group B",
+      "position": 2,
+      "points": 22
+    },
+    {
+      "team": "Djibouti",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group A第6名淘汰",
+      "group": "Group A",
+      "position": 6,
+      "points": 1
+    },
+    {
+      "team": "Egypt",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group A第1名晋级",
+      "group": "Group A",
+      "position": 1,
+      "points": 26
+    },
+    {
+      "team": "Equatorial Guinea",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group H第5名淘汰",
+      "group": "Group H",
+      "position": 5,
+      "points": 11
+    },
+    {
+      "team": "Eritrea",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group E第6名淘汰",
+      "group": "Group E",
+      "position": 6,
+      "points": 0
+    },
+    {
+      "team": "Eswatini",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group D第6名淘汰",
+      "group": "Group D",
+      "position": 6,
+      "points": 3
+    },
+    {
+      "team": "Ethiopia",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group A第5名淘汰",
+      "group": "Group A",
+      "position": 5,
+      "points": 9
+    },
+    {
+      "team": "Gabon",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第二轮附加赛淘汰",
+      "group": "Group F",
+      "position": 2,
+      "points": 25
+    },
+    {
+      "team": "Gambia",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group F第3名淘汰",
+      "group": "Group F",
+      "position": 3,
+      "points": 13
+    },
+    {
+      "team": "Ghana",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group I第1名晋级",
+      "group": "Group I",
+      "position": 1,
+      "points": 25
+    },
+    {
+      "team": "Guinea",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group G第4名淘汰",
+      "group": "Group G",
+      "position": 4,
+      "points": 15
+    },
+    {
+      "team": "Guinea-Bissau",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group A第4名淘汰",
+      "group": "Group A",
+      "position": 4,
+      "points": 10
+    },
+    {
+      "team": "Kenya",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group F第4名淘汰",
+      "group": "Group F",
+      "position": 4,
+      "points": 12
+    },
+    {
+      "team": "Lesotho",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group C第4名淘汰",
+      "group": "Group C",
+      "position": 4,
+      "points": 12
+    },
+    {
+      "team": "Liberia",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group H第3名淘汰",
+      "group": "Group H",
+      "position": 3,
+      "points": 15
+    },
+    {
+      "team": "Libya",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group D第3名淘汰",
+      "group": "Group D",
+      "position": 3,
+      "points": 16
+    },
+    {
+      "team": "Madagascar",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group I第2名淘汰",
+      "group": "Group I",
+      "position": 2,
+      "points": 19
+    },
+    {
+      "team": "Malawi",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group H第4名淘汰",
+      "group": "Group H",
+      "position": 4,
+      "points": 13
+    },
+    {
+      "team": "Mali",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group I第3名淘汰",
+      "group": "Group I",
+      "position": 3,
+      "points": 18
+    },
+    {
+      "team": "Mauritania",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group B第5名淘汰",
+      "group": "Group B",
+      "position": 5,
+      "points": 7
+    },
+    {
+      "team": "Mauritius",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group D第5名淘汰",
+      "group": "Group D",
+      "position": 5,
+      "points": 6
+    },
+    {
+      "team": "Morocco",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group E第1名晋级",
+      "group": "Group E",
+      "position": 1,
+      "points": 24
+    },
+    {
+      "team": "Mozambique",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group G第3名淘汰",
+      "group": "Group G",
+      "position": 3,
+      "points": 18
+    },
+    {
+      "team": "Namibia",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group H第2名淘汰",
+      "group": "Group H",
+      "position": 2,
+      "points": 15
+    },
+    {
+      "team": "Niger",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group E第2名淘汰",
+      "group": "Group E",
+      "position": 2,
+      "points": 15
+    },
+    {
+      "team": "Nigeria",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第二轮附加赛淘汰",
+      "group": "Group C",
+      "position": 2,
+      "points": 17
+    },
+    {
+      "team": "Rwanda",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group C第5名淘汰",
+      "group": "Group C",
+      "position": 5,
+      "points": 11
+    },
+    {
+      "team": "Senegal",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group B第1名晋级",
+      "group": "Group B",
+      "position": 1,
+      "points": 24
+    },
+    {
+      "team": "Seychelles",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group F第6名淘汰",
+      "group": "Group F",
+      "position": 6,
+      "points": 0
+    },
+    {
+      "team": "Sierra Leone",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group A第3名淘汰",
+      "group": "Group A",
+      "position": 3,
+      "points": 15
+    },
+    {
+      "team": "Somalia",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group G第6名淘汰",
+      "group": "Group G",
+      "position": 6,
+      "points": 1
+    },
+    {
+      "team": "South Africa",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group C第1名晋级",
+      "group": "Group C",
+      "position": 1,
+      "points": 18
+    },
+    {
+      "team": "South Sudan",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group B第6名淘汰",
+      "group": "Group B",
+      "position": 6,
+      "points": 5
+    },
+    {
+      "team": "Sudan",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group B第3名淘汰",
+      "group": "Group B",
+      "position": 3,
+      "points": 13
+    },
+    {
+      "team": "São Tomé and Príncipe",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group H第6名淘汰",
+      "group": "Group H",
+      "position": 6,
+      "points": 3
+    },
+    {
+      "team": "Tanzania",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group E第3名淘汰",
+      "group": "Group E",
+      "position": 3,
+      "points": 10
+    },
+    {
+      "team": "Togo",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group B第4名淘汰",
+      "group": "Group B",
+      "position": 4,
+      "points": 8
+    },
+    {
+      "team": "Tunisia",
+      "confed": "CAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CAF 第一轮Group H第1名晋级",
+      "group": "Group H",
+      "position": 1,
+      "points": 28
+    },
+    {
+      "team": "Uganda",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group G第2名淘汰",
+      "group": "Group G",
+      "position": 2,
+      "points": 18
+    },
+    {
+      "team": "Zambia",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group E第4名淘汰",
+      "group": "Group E",
+      "position": 4,
+      "points": 9
+    },
+    {
+      "team": "Zimbabwe",
+      "confed": "CAF",
+      "status": "eliminated",
+      "stage": "CAF 第一轮Group C第6名淘汰",
+      "group": "Group C",
+      "position": 6,
+      "points": 5
+    },
+    {
+      "team": "Bermuda",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮Group B第4名淘汰",
+      "group": "Group B",
+      "position": 4,
+      "points": 1
+    },
+    {
+      "team": "Canada",
+      "confed": "CONCACAF",
+      "status": "qualified",
+      "stage": "决赛圈东道主自动晋级",
+      "group": "Hosts",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Costa Rica",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮Group C第3名淘汰",
+      "group": "Group C",
+      "position": 3,
+      "points": 7
+    },
+    {
+      "team": "Curaçao",
+      "confed": "CONCACAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONCACAF 第三轮Group B第1名晋级",
+      "group": "Group B",
+      "position": 1,
+      "points": 12
+    },
+    {
+      "team": "El Salvador",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮Group A第4名淘汰",
+      "group": "Group A",
+      "position": 4,
+      "points": 3
+    },
+    {
+      "team": "Guatemala",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮Group A第3名淘汰",
+      "group": "Group A",
+      "position": 3,
+      "points": 8
+    },
+    {
+      "team": "Haiti",
+      "confed": "CONCACAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONCACAF 第三轮Group C第1名晋级",
+      "group": "Group C",
+      "position": 1,
+      "points": 11
+    },
+    {
+      "team": "Honduras",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮Group C第2名淘汰",
+      "group": "Group C",
+      "position": 2,
+      "points": 9
+    },
+    {
+      "team": "Jamaica",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮小组第二，洲际附加赛未出线",
+      "group": "Group B",
+      "position": 2,
+      "points": 11
+    },
+    {
+      "team": "Mexico",
+      "confed": "CONCACAF",
+      "status": "qualified",
+      "stage": "决赛圈东道主自动晋级",
+      "group": "Hosts",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Nicaragua",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮Group C第4名淘汰",
+      "group": "Group C",
+      "position": 4,
+      "points": 4
+    },
+    {
+      "team": "Panama",
+      "confed": "CONCACAF",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONCACAF 第三轮Group A第1名晋级",
+      "group": "Group A",
+      "position": 1,
+      "points": 12
+    },
+    {
+      "team": "Suriname",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮小组第二，洲际附加赛未出线",
+      "group": "Group A",
+      "position": 2,
+      "points": 9
+    },
+    {
+      "team": "Trinidad and Tobago",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第三轮Group B第3名淘汰",
+      "group": "Group B",
+      "position": 3,
+      "points": 7
+    },
+    {
+      "team": "United States",
+      "confed": "CONCACAF",
+      "status": "qualified",
+      "stage": "决赛圈东道主自动晋级",
+      "group": "Hosts",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Argentina",
+      "confed": "CONMEBOL",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONMEBOL 循环赛第1名晋级",
+      "group": "League",
+      "position": 1,
+      "points": 38
+    },
+    {
+      "team": "Bolivia",
+      "confed": "CONMEBOL",
+      "status": "eliminated",
+      "stage": "CONMEBOL 循环赛第7名，洲际附加赛未出线",
+      "group": "League",
+      "position": 7,
+      "points": 20
+    },
+    {
+      "team": "Brazil",
+      "confed": "CONMEBOL",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONMEBOL 循环赛第5名晋级",
+      "group": "League",
+      "position": 5,
+      "points": 28
+    },
+    {
+      "team": "Chile",
+      "confed": "CONMEBOL",
+      "status": "eliminated",
+      "stage": "CONMEBOL 循环赛第10名淘汰",
+      "group": "League",
+      "position": 10,
+      "points": 11
+    },
+    {
+      "team": "Colombia",
+      "confed": "CONMEBOL",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONMEBOL 循环赛第3名晋级",
+      "group": "League",
+      "position": 3,
+      "points": 28
+    },
+    {
+      "team": "Ecuador",
+      "confed": "CONMEBOL",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONMEBOL 循环赛第2名晋级",
+      "group": "League",
+      "position": 2,
+      "points": 29
+    },
+    {
+      "team": "Paraguay",
+      "confed": "CONMEBOL",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONMEBOL 循环赛第6名晋级",
+      "group": "League",
+      "position": 6,
+      "points": 28
+    },
+    {
+      "team": "Peru",
+      "confed": "CONMEBOL",
+      "status": "eliminated",
+      "stage": "CONMEBOL 循环赛第9名淘汰",
+      "group": "League",
+      "position": 9,
+      "points": 12
+    },
+    {
+      "team": "Uruguay",
+      "confed": "CONMEBOL",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；CONMEBOL 循环赛第4名晋级",
+      "group": "League",
+      "position": 4,
+      "points": 28
+    },
+    {
+      "team": "Venezuela",
+      "confed": "CONMEBOL",
+      "status": "eliminated",
+      "stage": "CONMEBOL 循环赛第8名淘汰",
+      "group": "League",
+      "position": 8,
+      "points": 18
+    },
+    {
+      "team": "American Samoa",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第一轮淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Cook Islands",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第一轮淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Fiji",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第三轮半决赛淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "New Caledonia",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第三轮决赛负于新西兰；洲际附加赛未出线",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "New Zealand",
+      "confed": "OFC",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；OFC 第三轮决赛胜出晋级",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Papua New Guinea",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第二轮小组赛淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Samoa",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第二轮小组赛淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Solomon Islands",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第二轮小组赛淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Tahiti",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第三轮半决赛淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Tonga",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第一轮淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Vanuatu",
+      "confed": "OFC",
+      "status": "eliminated",
+      "stage": "OFC 第二轮小组赛淘汰",
+      "group": "OFC",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Albania",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group K第2名，附加赛淘汰",
+      "group": "Group K",
+      "position": 2,
+      "points": 14
+    },
+    {
+      "team": "Andorra",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group K第5名淘汰",
+      "group": "Group K",
+      "position": 5,
+      "points": 1
+    },
+    {
+      "team": "Armenia",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group F第4名淘汰",
+      "group": "Group F",
+      "position": 4,
+      "points": 3
+    },
+    {
+      "team": "Austria",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group H第1名直接晋级",
+      "group": "Group H",
+      "position": 1,
+      "points": 19
+    },
+    {
+      "team": "Azerbaijan",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group D第4名淘汰",
+      "group": "Group D",
+      "position": 4,
+      "points": 1
+    },
+    {
+      "team": "Belarus",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group C第4名淘汰",
+      "group": "Group C",
+      "position": 4,
+      "points": 2
+    },
+    {
+      "team": "Belgium",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group J第1名直接晋级",
+      "group": "Group J",
+      "position": 1,
+      "points": 18
+    },
+    {
+      "team": "Bosnia and Herzegovina",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group H第2名，附加赛晋级",
+      "group": "Group H",
+      "position": 2,
+      "points": 17
+    },
+    {
+      "team": "Bulgaria",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group E第4名淘汰",
+      "group": "Group E",
+      "position": 4,
+      "points": 3
+    },
+    {
+      "team": "Croatia",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group L第1名直接晋级",
+      "group": "Group L",
+      "position": 1,
+      "points": 22
+    },
+    {
+      "team": "Cyprus",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group H第4名淘汰",
+      "group": "Group H",
+      "position": 4,
+      "points": 8
+    },
+    {
+      "team": "Czechia",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group L第2名，附加赛晋级",
+      "group": "Group L",
+      "position": 2,
+      "points": 16
+    },
+    {
+      "team": "Denmark",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group C第2名，附加赛淘汰",
+      "group": "Group C",
+      "position": 2,
+      "points": 11
+    },
+    {
+      "team": "England",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group K第1名直接晋级",
+      "group": "Group K",
+      "position": 1,
+      "points": 24
+    },
+    {
+      "team": "Estonia",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group I第4名淘汰",
+      "group": "Group I",
+      "position": 4,
+      "points": 4
+    },
+    {
+      "team": "Faroe Islands",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group L第3名淘汰",
+      "group": "Group L",
+      "position": 3,
+      "points": 12
+    },
+    {
+      "team": "Finland",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group G第3名淘汰",
+      "group": "Group G",
+      "position": 3,
+      "points": 10
+    },
+    {
+      "team": "France",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group D第1名直接晋级",
+      "group": "Group D",
+      "position": 1,
+      "points": 16
+    },
+    {
+      "team": "Georgia",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group E第3名淘汰",
+      "group": "Group E",
+      "position": 3,
+      "points": 3
+    },
+    {
+      "team": "Germany",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group A第1名直接晋级",
+      "group": "Group A",
+      "position": 1,
+      "points": 15
+    },
+    {
+      "team": "Gibraltar",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group L第5名淘汰",
+      "group": "Group L",
+      "position": 5,
+      "points": 0
+    },
+    {
+      "team": "Greece",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group C第3名淘汰",
+      "group": "Group C",
+      "position": 3,
+      "points": 7
+    },
+    {
+      "team": "Hungary",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group F第3名淘汰",
+      "group": "Group F",
+      "position": 3,
+      "points": 8
+    },
+    {
+      "team": "Iceland",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group D第3名淘汰",
+      "group": "Group D",
+      "position": 3,
+      "points": 7
+    },
+    {
+      "team": "Israel",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group I第3名淘汰",
+      "group": "Group I",
+      "position": 3,
+      "points": 12
+    },
+    {
+      "team": "Italy",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group I第2名，附加赛淘汰",
+      "group": "Group I",
+      "position": 2,
+      "points": 18
+    },
+    {
+      "team": "Kazakhstan",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group J第4名淘汰",
+      "group": "Group J",
+      "position": 4,
+      "points": 8
+    },
+    {
+      "team": "Kosovo",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group B第2名，附加赛淘汰",
+      "group": "Group B",
+      "position": 2,
+      "points": 11
+    },
+    {
+      "team": "Latvia",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group K第4名淘汰",
+      "group": "Group K",
+      "position": 4,
+      "points": 5
+    },
+    {
+      "team": "Liechtenstein",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group J第5名淘汰",
+      "group": "Group J",
+      "position": 5,
+      "points": 0
+    },
+    {
+      "team": "Lithuania",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group G第5名淘汰",
+      "group": "Group G",
+      "position": 5,
+      "points": 3
+    },
+    {
+      "team": "Luxembourg",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group A第4名淘汰",
+      "group": "Group A",
+      "position": 4,
+      "points": 0
+    },
+    {
+      "team": "Malta",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group G第4名淘汰",
+      "group": "Group G",
+      "position": 4,
+      "points": 5
+    },
+    {
+      "team": "Moldova",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group I第5名淘汰",
+      "group": "Group I",
+      "position": 5,
+      "points": 1
+    },
+    {
+      "team": "Montenegro",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group L第4名淘汰",
+      "group": "Group L",
+      "position": 4,
+      "points": 9
+    },
+    {
+      "team": "Netherlands",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group G第1名直接晋级",
+      "group": "Group G",
+      "position": 1,
+      "points": 20
+    },
+    {
+      "team": "North Macedonia",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group J第3名淘汰",
+      "group": "Group J",
+      "position": 3,
+      "points": 13
+    },
+    {
+      "team": "Northern Ireland",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group A第3名淘汰",
+      "group": "Group A",
+      "position": 3,
+      "points": 9
+    },
+    {
+      "team": "Norway",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group I第1名直接晋级",
+      "group": "Group I",
+      "position": 1,
+      "points": 24
+    },
+    {
+      "team": "Poland",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group G第2名，附加赛淘汰",
+      "group": "Group G",
+      "position": 2,
+      "points": 17
+    },
+    {
+      "team": "Portugal",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group F第1名直接晋级",
+      "group": "Group F",
+      "position": 1,
+      "points": 13
+    },
+    {
+      "team": "Republic of Ireland",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group F第2名，附加赛淘汰",
+      "group": "Group F",
+      "position": 2,
+      "points": 10
+    },
+    {
+      "team": "Romania",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group H第3名淘汰",
+      "group": "Group H",
+      "position": 3,
+      "points": 13
+    },
+    {
+      "team": "San Marino",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group H第5名淘汰",
+      "group": "Group H",
+      "position": 5,
+      "points": 0
+    },
+    {
+      "team": "Scotland",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group C第1名直接晋级",
+      "group": "Group C",
+      "position": 1,
+      "points": 13
+    },
+    {
+      "team": "Serbia",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group K第3名淘汰",
+      "group": "Group K",
+      "position": 3,
+      "points": 13
+    },
+    {
+      "team": "Slovakia",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group A第2名，附加赛淘汰",
+      "group": "Group A",
+      "position": 2,
+      "points": 12
+    },
+    {
+      "team": "Slovenia",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group B第3名淘汰",
+      "group": "Group B",
+      "position": 3,
+      "points": 4
+    },
+    {
+      "team": "Spain",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group E第1名直接晋级",
+      "group": "Group E",
+      "position": 1,
+      "points": 16
+    },
+    {
+      "team": "Sweden",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group B第4名，附加赛晋级",
+      "group": "Group B",
+      "position": 4,
+      "points": 2
+    },
+    {
+      "team": "Switzerland",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group B第1名直接晋级",
+      "group": "Group B",
+      "position": 1,
+      "points": 14
+    },
+    {
+      "team": "Türkiye",
+      "confed": "UEFA",
+      "status": "qualified",
+      "stage": "晋级 2026 世界杯决赛圈；UEFA 第一轮Group E第2名，附加赛晋级",
+      "group": "Group E",
+      "position": 2,
+      "points": 13
+    },
+    {
+      "team": "Ukraine",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group D第2名，附加赛淘汰",
+      "group": "Group D",
+      "position": 2,
+      "points": 10
+    },
+    {
+      "team": "Wales",
+      "confed": "UEFA",
+      "status": "eliminated",
+      "stage": "UEFA 第一轮Group J第2名，附加赛淘汰",
+      "group": "Group J",
+      "position": 2,
+      "points": 16
+    }
+  ],
+  "qualifiedRows": [
+    {
+      "team": "Canada",
+      "method": "Hosts",
+      "date": "14 February 2023 [ a ]"
+    },
+    {
+      "team": "Mexico",
+      "method": "Hosts",
+      "date": "14 February 2023 [ a ]"
+    },
+    {
+      "team": "United States",
+      "method": "Hosts",
+      "date": "14 February 2023 [ a ]"
+    },
+    {
+      "team": "Japan",
+      "method": "AFC third round Group C winners",
+      "date": "20 March 2025"
+    },
+    {
+      "team": "New Zealand",
+      "method": "OFC third round winners",
+      "date": "24 March 2025"
+    },
+    {
+      "team": "Iran",
+      "method": "AFC third round Group A winners",
+      "date": "25 March 2025"
+    },
+    {
+      "team": "Argentina",
+      "method": "CONMEBOL winners",
+      "date": "25 March 2025"
+    },
+    {
+      "team": "Uzbekistan",
+      "method": "AFC third round Group A runners-up",
+      "date": "5 June 2025"
+    },
+    {
+      "team": "Jordan",
+      "method": "AFC third round Group B runners-up",
+      "date": "5 June 2025"
+    },
+    {
+      "team": "South Korea",
+      "method": "AFC third round Group B winners",
+      "date": "5 June 2025"
+    },
+    {
+      "team": "Australia",
+      "method": "AFC third round Group C runners-up",
+      "date": "10 June 2025"
+    },
+    {
+      "team": "Brazil",
+      "method": "CONMEBOL fifth place",
+      "date": "10 June 2025"
+    },
+    {
+      "team": "Ecuador",
+      "method": "CONMEBOL runners-up",
+      "date": "10 June 2025"
+    },
+    {
+      "team": "Paraguay",
+      "method": "CONMEBOL sixth place",
+      "date": "4 September 2025"
+    },
+    {
+      "team": "Uruguay",
+      "method": "CONMEBOL fourth place",
+      "date": "4 September 2025"
+    },
+    {
+      "team": "Colombia",
+      "method": "CONMEBOL third place",
+      "date": "4 September 2025"
+    },
+    {
+      "team": "Morocco",
+      "method": "CAF Group E winners",
+      "date": "5 September 2025"
+    },
+    {
+      "team": "Tunisia",
+      "method": "CAF Group H winners",
+      "date": "8 September 2025"
+    },
+    {
+      "team": "Egypt",
+      "method": "CAF Group A winners",
+      "date": "8 October 2025"
+    },
+    {
+      "team": "Algeria",
+      "method": "CAF Group G winners",
+      "date": "9 October 2025"
+    },
+    {
+      "team": "Ghana",
+      "method": "CAF Group I winners",
+      "date": "12 October 2025"
+    },
+    {
+      "team": "Cape Verde",
+      "method": "CAF Group D winners",
+      "date": "13 October 2025"
+    },
+    {
+      "team": "Qatar",
+      "method": "AFC fourth round Group A winners",
+      "date": "14 October 2025"
+    },
+    {
+      "team": "Saudi Arabia",
+      "method": "AFC fourth round Group B winners",
+      "date": "14 October 2025"
+    },
+    {
+      "team": "Senegal",
+      "method": "CAF Group B winners",
+      "date": "14 October 2025"
+    },
+    {
+      "team": "South Africa",
+      "method": "CAF Group C winners",
+      "date": "14 October 2025"
+    },
+    {
+      "team": "Côte d’Ivoire",
+      "method": "CAF Group F winners",
+      "date": "14 October 2025"
+    },
+    {
+      "team": "England",
+      "method": "UEFA Group K winners",
+      "date": "14 October 2025"
+    },
+    {
+      "team": "France",
+      "method": "UEFA Group D winners",
+      "date": "13 November 2025"
+    },
+    {
+      "team": "Croatia",
+      "method": "UEFA Group L winners",
+      "date": "14 November 2025"
+    },
+    {
+      "team": "Portugal",
+      "method": "UEFA Group F winners",
+      "date": "16 November 2025"
+    },
+    {
+      "team": "Norway",
+      "method": "UEFA Group I winners",
+      "date": "16 November 2025"
+    },
+    {
+      "team": "Germany",
+      "method": "UEFA Group A winners",
+      "date": "17 November 2025"
+    },
+    {
+      "team": "Netherlands",
+      "method": "UEFA Group G winners",
+      "date": "17 November 2025"
+    },
+    {
+      "team": "Switzerland",
+      "method": "UEFA Group B winners",
+      "date": "18 November 2025"
+    },
+    {
+      "team": "Scotland",
+      "method": "UEFA Group C winners",
+      "date": "18 November 2025"
+    },
+    {
+      "team": "Spain",
+      "method": "UEFA Group E winners",
+      "date": "18 November 2025"
+    },
+    {
+      "team": "Austria",
+      "method": "UEFA Group H winners",
+      "date": "18 November 2025"
+    },
+    {
+      "team": "Belgium",
+      "method": "UEFA Group J winners",
+      "date": "18 November 2025"
+    },
+    {
+      "team": "Panama",
+      "method": "CONCACAF third round Group A winners",
+      "date": "18 November 2025"
+    },
+    {
+      "team": "Curaçao",
+      "method": "CONCACAF third round Group B winners",
+      "date": "18 November 2025"
+    },
+    {
+      "team": "Haiti",
+      "method": "CONCACAF third round Group C winners",
+      "date": "18 November 2025"
+    },
+    {
+      "team": "Bosnia and Herzegovina",
+      "method": "UEFA play-offs Path A winners",
+      "date": "31 March 2026"
+    },
+    {
+      "team": "Sweden",
+      "method": "UEFA play-offs Path B winners",
+      "date": "31 March 2026"
+    },
+    {
+      "team": "Türkiye",
+      "method": "UEFA play-offs Path C winners",
+      "date": "31 March 2026"
+    },
+    {
+      "team": "Czechia",
+      "method": "UEFA play-offs Path D winners",
+      "date": "31 March 2026"
+    },
+    {
+      "team": "DR Congo",
+      "method": "Inter-confederation Pathway 1 play-off winners",
+      "date": "31 March 2026"
+    },
+    {
+      "team": "Iraq",
+      "method": "Inter-confederation Pathway 2 play-off winners",
+      "date": "31 March 2026"
+    }
+  ],
+  "notes": [
+    "资格赛数据由 Wikipedia 2026 FIFA World Cup qualification 页表格抽取；早期轮次未在主表完整列出的协会不会逐一精确标注。"
+  ]
+}
