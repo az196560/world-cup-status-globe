@@ -11,6 +11,8 @@ import {
   RotateCcw,
   Search,
   Trophy,
+  ZoomIn,
+  ZoomOut,
 } from "lucide-react";
 import {
   geoDistance,
@@ -124,6 +126,9 @@ const copy = {
     team: "队",
     scheduled: "待赛",
     live: "进行中",
+    zoom: "缩放",
+    zoomIn: "放大",
+    zoomOut: "缩小",
   },
   en: {
     all: "All",
@@ -161,6 +166,9 @@ const copy = {
     team: "Team",
     scheduled: "Scheduled",
     live: "Live",
+    zoom: "Zoom",
+    zoomIn: "Zoom in",
+    zoomOut: "Zoom out",
   },
 };
 
@@ -205,6 +213,12 @@ function knockoutLabel(round: (typeof bracketRoundOrder)[number] | "Third place"
 
 const bracketSlotHeight = 184;
 const bracketCardHeight = 164;
+const minGlobeZoom = 0.75;
+const maxGlobeZoom = 1.85;
+
+function clampGlobeZoom(value: number) {
+  return Math.max(minGlobeZoom, Math.min(maxGlobeZoom, value));
+}
 
 function bracketTop(round: (typeof bracketRoundOrder)[number], index: number) {
   const roundIndex = bracketRoundOrder.indexOf(round);
@@ -409,6 +423,7 @@ function makeRows() {
 export function WorldCupDashboard() {
   const [features, setFeatures] = useState<CountryFeature[]>([]);
   const [rotation, setRotation] = useState<[number, number]>([-18, -18]);
+  const [globeZoom, setGlobeZoom] = useState(1);
   const [selectedTeam, setSelectedTeam] = useState("United States");
   const [query, setQuery] = useState("");
   const [language, setLanguage] = useState<Language>("zh");
@@ -497,10 +512,10 @@ export function WorldCupDashboard() {
   const projection = useMemo(() => {
     return geoOrthographic()
       .rotate(rotation)
-      .scale(330)
+      .scale(330 * globeZoom)
       .translate([360, 360])
       .clipAngle(90);
-  }, [rotation]);
+  }, [globeZoom, rotation]);
 
   const path = useMemo(() => geoPath(projection), [projection]);
   const selectedCountryName = selectedTournamentTeam?.name ?? selectedTeam;
@@ -567,6 +582,20 @@ export function WorldCupDashboard() {
     dragState.current = null;
   }
 
+  function changeGlobeZoom(delta: number) {
+    setGlobeZoom((value) => clampGlobeZoom(Number((value + delta).toFixed(2))));
+  }
+
+  function onGlobeWheel(event: React.WheelEvent<SVGSVGElement>) {
+    event.preventDefault();
+    changeGlobeZoom(event.deltaY > 0 ? -0.08 : 0.08);
+  }
+
+  function resetGlobeView() {
+    setRotation([-18, -18]);
+    setGlobeZoom(1);
+  }
+
   return (
     <main className="site-shell">
       <section className="hero-band">
@@ -609,69 +638,91 @@ export function WorldCupDashboard() {
               <h2>{text.globeTitle}</h2>
               <p>{text.globeLegend}</p>
             </div>
-            <button
-              className="icon-button"
-              type="button"
-              aria-label={text.reset}
-              title={text.reset}
-              onClick={() => setRotation([-18, -18])}
-            >
-              <RotateCcw size={18} />
-            </button>
+            <div className="globe-controls" aria-label={text.zoom}>
+              <button
+                className="icon-button"
+                type="button"
+                aria-label={text.reset}
+                title={text.reset}
+                onClick={resetGlobeView}
+              >
+                <RotateCcw size={18} />
+              </button>
+              <button type="button" className="icon-button" onClick={() => changeGlobeZoom(-0.1)} aria-label={text.zoomOut} title={text.zoomOut}>
+                <ZoomOut size={18} />
+              </button>
+              <label>
+                <span>{text.zoom}</span>
+                <input
+                  type="range"
+                  min={minGlobeZoom}
+                  max={maxGlobeZoom}
+                  step="0.05"
+                  value={globeZoom}
+                  onChange={(event) => setGlobeZoom(clampGlobeZoom(Number(event.target.value)))}
+                />
+              </label>
+              <button type="button" className="icon-button" onClick={() => changeGlobeZoom(0.1)} aria-label={text.zoomIn} title={text.zoomIn}>
+                <ZoomIn size={18} />
+              </button>
+            </div>
           </div>
 
-          <svg
-            className="globe"
-            viewBox="0 0 720 720"
-            role="img"
-            aria-label={text.globeAlt}
-            onPointerDown={onPointerDown}
-            onPointerMove={onPointerMove}
-            onPointerUp={onPointerUp}
-            onPointerCancel={onPointerUp}
-          >
-            <path className="sphere" d={path({ type: "Sphere" } as GeoPermissibleObjects) ?? ""} />
-            <path className="graticule" d={path(geoGraticule10()) ?? ""} />
-            {features.map((country, index) => {
-              const name = normalizeName(country.properties?.name ?? "");
-              const status = statusForCountry(name);
-              const isSelected = normalizeName(name) === selectedCountryName;
-              return (
-                <path
-                  key={`${name}-${index}`}
-                  d={path(country as GeoPermissibleObjects) ?? ""}
-                  fill={countryFill(status, isSelected)}
-                  className={name ? "country clickable-country" : "country"}
-                  data-country={name}
-                >
-                  <title>{regionLabel(name, language)}</title>
-                </path>
-              );
-            })}
-            {visibleMarkers.map(({ association, x, y }) => {
-              const markerStatus = statusForCountry(association.name);
-              const selected = association.name === selectedTeam;
-              return (
-              <g key={association.name}>
-                <circle
-                  cx={x}
-                  cy={y}
-                  r={14}
-                  className="team-hit"
-                  data-team={association.name}
-                />
-                <circle
-                  cx={x}
-                  cy={y}
-                  r={selected ? 7 : 4.5}
-                  className={`team-dot ${markerStatus}${selected ? " selected" : ""}`}
-                  data-team={association.name}
-                />
-                <title>{regionLabel(association.name, language)}</title>
-              </g>
-              );
-            })}
-          </svg>
+          <div className="globe-stage">
+            <svg
+              className="globe"
+              viewBox="0 0 720 720"
+              role="img"
+              aria-label={text.globeAlt}
+              onPointerDown={onPointerDown}
+              onPointerMove={onPointerMove}
+              onPointerUp={onPointerUp}
+              onPointerCancel={onPointerUp}
+              onWheel={onGlobeWheel}
+            >
+              <path className="sphere" d={path({ type: "Sphere" } as GeoPermissibleObjects) ?? ""} />
+              <path className="graticule" d={path(geoGraticule10()) ?? ""} />
+              {features.map((country, index) => {
+                const name = normalizeName(country.properties?.name ?? "");
+                const status = statusForCountry(name);
+                const isSelected = normalizeName(name) === selectedCountryName;
+                return (
+                  <path
+                    key={`${name}-${index}`}
+                    d={path(country as GeoPermissibleObjects) ?? ""}
+                    fill={countryFill(status, isSelected)}
+                    className={name ? "country clickable-country" : "country"}
+                    data-country={name}
+                  >
+                    <title>{regionLabel(name, language)}</title>
+                  </path>
+                );
+              })}
+              {visibleMarkers.map(({ association, x, y }) => {
+                const markerStatus = statusForCountry(association.name);
+                const selected = association.name === selectedTeam;
+                return (
+                  <g key={association.name}>
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r={14}
+                      className="team-hit"
+                      data-team={association.name}
+                    />
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r={selected ? 7 : 4.5}
+                      className={`team-dot ${markerStatus}${selected ? " selected" : ""}`}
+                      data-team={association.name}
+                    />
+                    <title>{regionLabel(association.name, language)}</title>
+                  </g>
+                );
+              })}
+            </svg>
+          </div>
         </div>
 
         <aside className="detail-panel">

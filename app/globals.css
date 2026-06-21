@@ -166,6 +166,8 @@ small {
 }
 
 .globe-panel {
+  display: grid;
+  grid-template-rows: auto minmax(360px, 1fr);
   min-height: 650px;
 }
 
@@ -202,18 +204,52 @@ small {
   color: var(--teal-dark);
 }
 
+.globe-stage {
+  display: grid;
+  place-items: center;
+  min-height: clamp(360px, 48vw, 680px);
+  overflow: hidden;
+  padding: clamp(10px, 2vw, 22px);
+}
+
 .globe {
   display: block;
-  width: min(100%, 760px);
+  width: min(100%, 680px);
+  aspect-ratio: 1;
   height: auto;
-  max-height: 78vh;
   margin: 0 auto;
   cursor: grab;
   touch-action: none;
+  user-select: none;
 }
 
 .globe:active {
   cursor: grabbing;
+}
+
+.globe-controls {
+  display: grid;
+  grid-template-columns: 40px 40px minmax(120px, 1fr) 40px;
+  gap: 10px;
+  align-items: center;
+  width: min(430px, 100%);
+}
+
+.globe-controls label {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.globe-controls label span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.globe-controls input {
+  width: 100%;
+  accent-color: var(--teal);
 }
 
 .sphere {
@@ -709,12 +745,18 @@ tbody tr:hover {
 
 @media (max-width: 720px) {
   .site-shell {
-    padding: 14px;
+    gap: 14px;
+    padding: 12px;
   }
 
   .hero-band {
     min-height: 0;
     padding-bottom: 14px;
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.02;
   }
 
   .metric-strip,
@@ -723,7 +765,23 @@ tbody tr:hover {
   }
 
   .globe-panel {
+    grid-template-rows: auto auto auto;
     min-height: 0;
+  }
+
+  .globe-stage {
+    min-height: min(92vw, 520px);
+    padding: 8px;
+  }
+
+  .globe {
+    width: min(100%, 520px);
+  }
+
+  .globe-controls {
+    grid-template-columns: 40px 40px minmax(0, 1fr) 40px;
+    gap: 8px;
+    width: 100%;
   }
 
   .panel-title {
