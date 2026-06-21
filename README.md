@@ -12,8 +12,8 @@ a globe.
   fixtures, and current notes.
 - Knockout-stage bracket with match numbers, teams/placeholders, kickoff times,
   venues, and cities.
-- 162 parsed qualification records from the 2026 FIFA World Cup qualification
-  tables.
+- 210 parsed qualification records from the 2026 FIFA World Cup qualification
+  tables, including AFC and CONCACAF early-round eliminations.
 - Search and filters for finalists and eliminated teams.
 
 Data is static and labeled as current through `2026-06-21`.

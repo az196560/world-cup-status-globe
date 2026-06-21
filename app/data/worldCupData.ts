@@ -37,8 +37,8 @@ export const dataFreshness = {
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
-    "资格赛阶段来自 Wikipedia 的 2026 FIFA World Cup qualification 页面表格。",
-    "早期资格赛轮次未在主表完整列出的协会，会在总表里标为资料未精确到轮次。",
+    "资格赛阶段来自 Wikipedia 主页面及 AFC、CONCACAF 各洲预选赛页面表格；已覆盖 210 支参赛队。",
+    "少数未参赛、被禁赛、退赛或非 FIFA 成员的国家/地区不在参赛记录内。",
   ],
 };
 
@@ -50,6 +50,14 @@ export const sources = [
   {
     label: "Wikipedia 2026 FIFA World Cup qualification",
     url: "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
+  },
+  {
+    label: "Wikipedia AFC qualification",
+    url: "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(AFC)",
+  },
+  {
+    label: "Wikipedia CONCACAF qualification",
+    url: "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONCACAF)",
   },
   {
     label: "FIFA World Cup 26 match centre",

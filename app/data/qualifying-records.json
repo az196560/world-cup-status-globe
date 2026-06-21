@@ -1,7 +1,16 @@
 {
-  "generatedAt": "2026-06-20",
+  "generatedAt": "2026-06-21",
   "sourceUrl": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
   "records": [
+    {
+      "team": "Afghanistan",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group A 第4名淘汰",
+      "group": "Group A",
+      "position": 4,
+      "points": 5
+    },
     {
       "team": "Australia",
       "confed": "AFC",
@@ -21,6 +30,42 @@
       "points": 6
     },
     {
+      "team": "Bangladesh",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group I 第4名淘汰",
+      "group": "Group I",
+      "position": 4,
+      "points": 1
+    },
+    {
+      "team": "Bhutan",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Brunei",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Cambodia",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
       "team": "China",
       "confed": "AFC",
       "status": "eliminated",
@@ -28,6 +73,42 @@
       "group": "Group C",
       "position": 5,
       "points": 9
+    },
+    {
+      "team": "Chinese Taipei",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group D 第4名淘汰",
+      "group": "Group D",
+      "position": 4,
+      "points": 0
+    },
+    {
+      "team": "Guam",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Hong Kong",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group E 第4名淘汰",
+      "group": "Group E",
+      "position": 4,
+      "points": 2
+    },
+    {
+      "team": "India",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group A 第3名淘汰",
+      "group": "Group A",
+      "position": 3,
+      "points": 5
     },
     {
       "team": "Indonesia",
@@ -93,6 +174,78 @@
       "points": 8
     },
     {
+      "team": "Laos",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Lebanon",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group I 第3名淘汰",
+      "group": "Group I",
+      "position": 3,
+      "points": 6
+    },
+    {
+      "team": "Macau",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Malaysia",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group D 第3名淘汰",
+      "group": "Group D",
+      "position": 3,
+      "points": 10
+    },
+    {
+      "team": "Maldives",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Mongolia",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Myanmar",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group B 第4名淘汰",
+      "group": "Group B",
+      "position": 4,
+      "points": 1
+    },
+    {
+      "team": "Nepal",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group H 第4名淘汰",
+      "group": "Group H",
+      "position": 4,
+      "points": 1
+    },
+    {
       "team": "North Korea",
       "confed": "AFC",
       "status": "eliminated",
@@ -111,6 +264,15 @@
       "points": 1
     },
     {
+      "team": "Pakistan",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group G 第4名淘汰",
+      "group": "Group G",
+      "position": 4,
+      "points": 0
+    },
+    {
       "team": "Palestine",
       "confed": "AFC",
       "status": "eliminated",
@@ -118,6 +280,15 @@
       "group": "Group B",
       "position": 5,
       "points": 10
+    },
+    {
+      "team": "Philippines",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group F 第4名淘汰",
+      "group": "Group F",
+      "position": 4,
+      "points": 1
     },
     {
       "team": "Qatar",
@@ -138,6 +309,15 @@
       "points": 13
     },
     {
+      "team": "Singapore",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group C 第4名淘汰",
+      "group": "Group C",
+      "position": 4,
+      "points": 1
+    },
+    {
       "team": "South Korea",
       "confed": "AFC",
       "status": "qualified",
@@ -145,6 +325,60 @@
       "group": "Group B",
       "position": 1,
       "points": 22
+    },
+    {
+      "team": "Sri Lanka",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Syria",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group B 第3名淘汰",
+      "group": "Group B",
+      "position": 3,
+      "points": 7
+    },
+    {
+      "team": "Tajikistan",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group G 第3名淘汰",
+      "group": "Group G",
+      "position": 3,
+      "points": 8
+    },
+    {
+      "team": "Thailand",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group C 第3名淘汰",
+      "group": "Group C",
+      "position": 3,
+      "points": 8
+    },
+    {
+      "team": "Timor-Leste",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "Turkmenistan",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group E 第3名淘汰",
+      "group": "Group E",
+      "position": 3,
+      "points": 2
     },
     {
       "team": "United Arab Emirates",
@@ -163,6 +397,24 @@
       "group": "Group A",
       "position": 2,
       "points": 21
+    },
+    {
+      "team": "Vietnam",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group F 第3名淘汰",
+      "group": "Group F",
+      "position": 3,
+      "points": 6
+    },
+    {
+      "team": "Yemen",
+      "confed": "AFC",
+      "status": "eliminated",
+      "stage": "AFC 第二轮 Group H 第3名淘汰",
+      "group": "Group H",
+      "position": 3,
+      "points": 5
     },
     {
       "team": "Algeria",
@@ -651,6 +903,60 @@
       "points": 5
     },
     {
+      "team": "Anguilla",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group F 第5名淘汰",
+      "group": "Group F",
+      "position": 5,
+      "points": 0
+    },
+    {
+      "team": "Antigua and Barbuda",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group A 第5名淘汰",
+      "group": "Group A",
+      "position": 5,
+      "points": 1
+    },
+    {
+      "team": "Aruba",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group C 第4名淘汰",
+      "group": "Group C",
+      "position": 4,
+      "points": 2
+    },
+    {
+      "team": "Bahamas",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group B 第5名淘汰",
+      "group": "Group B",
+      "position": 5,
+      "points": 0
+    },
+    {
+      "team": "Barbados",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group C 第5名淘汰",
+      "group": "Group C",
+      "position": 5,
+      "points": 1
+    },
+    {
+      "team": "Belize",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group D 第5名淘汰",
+      "group": "Group D",
+      "position": 5,
+      "points": 0
+    },
+    {
       "team": "Bermuda",
       "confed": "CONCACAF",
       "status": "eliminated",
@@ -658,6 +964,15 @@
       "group": "Group B",
       "position": 4,
       "points": 1
+    },
+    {
+      "team": "British Virgin Islands",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group E 第5名淘汰",
+      "group": "Group E",
+      "position": 5,
+      "points": 0
     },
     {
       "team": "Canada",
@@ -669,6 +984,15 @@
       "points": null
     },
     {
+      "team": "Cayman Islands",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group A 第4名淘汰",
+      "group": "Group A",
+      "position": 4,
+      "points": 3
+    },
+    {
       "team": "Costa Rica",
       "confed": "CONCACAF",
       "status": "eliminated",
@@ -676,6 +1000,15 @@
       "group": "Group C",
       "position": 3,
       "points": 7
+    },
+    {
+      "team": "Cuba",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group A 第3名淘汰",
+      "group": "Group A",
+      "position": 3,
+      "points": 6
     },
     {
       "team": "Curaçao",
@@ -687,6 +1020,24 @@
       "points": 12
     },
     {
+      "team": "Dominica",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group E 第4名淘汰",
+      "group": "Group E",
+      "position": 4,
+      "points": 3
+    },
+    {
+      "team": "Dominican Republic",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group E 第3名淘汰",
+      "group": "Group E",
+      "position": 3,
+      "points": 6
+    },
+    {
       "team": "El Salvador",
       "confed": "CONCACAF",
       "status": "eliminated",
@@ -696,6 +1047,15 @@
       "points": 3
     },
     {
+      "team": "Grenada",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group B 第3名淘汰",
+      "group": "Group B",
+      "position": 3,
+      "points": 7
+    },
+    {
       "team": "Guatemala",
       "confed": "CONCACAF",
       "status": "eliminated",
@@ -703,6 +1063,15 @@
       "group": "Group A",
       "position": 3,
       "points": 8
+    },
+    {
+      "team": "Guyana",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group D 第3名淘汰",
+      "group": "Group D",
+      "position": 3,
+      "points": 6
     },
     {
       "team": "Haiti",
@@ -741,6 +1110,15 @@
       "points": null
     },
     {
+      "team": "Montserrat",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group D 第4名淘汰",
+      "group": "Group D",
+      "position": 4,
+      "points": 3
+    },
+    {
       "team": "Nicaragua",
       "confed": "CONCACAF",
       "status": "eliminated",
@@ -759,6 +1137,42 @@
       "points": 12
     },
     {
+      "team": "Puerto Rico",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group F 第3名淘汰",
+      "group": "Group F",
+      "position": 3,
+      "points": 7
+    },
+    {
+      "team": "Saint Kitts and Nevis",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group B 第4名淘汰",
+      "group": "Group B",
+      "position": 4,
+      "points": 3
+    },
+    {
+      "team": "Saint Lucia",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group C 第3名淘汰",
+      "group": "Group C",
+      "position": 3,
+      "points": 4
+    },
+    {
+      "team": "Saint Vincent and the Grenadines",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第二轮 Group F 第4名淘汰",
+      "group": "Group F",
+      "position": 4,
+      "points": 3
+    },
+    {
       "team": "Suriname",
       "confed": "CONCACAF",
       "status": "eliminated",
@@ -775,6 +1189,24 @@
       "group": "Group B",
       "position": 3,
       "points": 7
+    },
+    {
+      "team": "Turks and Caicos Islands",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
+    },
+    {
+      "team": "U.S. Virgin Islands",
+      "confed": "CONCACAF",
+      "status": "eliminated",
+      "stage": "CONCACAF 第一轮两回合附加赛淘汰",
+      "group": "First round",
+      "position": null,
+      "points": null
     },
     {
       "team": "United States",
@@ -1704,6 +2136,13 @@
     }
   ],
   "notes": [
-    "资格赛数据由 Wikipedia 2026 FIFA World Cup qualification 页表格抽取；早期轮次未在主表完整列出的协会不会逐一精确标注。"
+    "资格赛数据由 Wikipedia 2026 FIFA World Cup qualification 主页面及 AFC、CONCACAF 各洲预选赛页面表格抽取。",
+    "AFC 已补入第一轮、第二轮出局队；CONCACAF 已补入第一轮、第二轮出局队；后续阶段记录优先保留更高阶段结果。",
+    "少数未参赛、被禁赛、退赛或非 FIFA 成员的国家/地区不在参赛记录内。"
+  ],
+  "sourceUrls": [
+    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification",
+    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(AFC)",
+    "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONCACAF)"
   ]
 }
