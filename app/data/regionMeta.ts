@@ -236,16 +236,18 @@ const overrides: Record<string, RegionOverride> = {
   "United States": { flag: "🇺🇸", zh: "美国", en: "United States" },
 };
 
-const confederations: Record<ConfederationCode, { zh: string; en: string }> = {
-  AFC: { zh: "亚洲足球联合会", en: "Asian Football Confederation" },
-  CAF: { zh: "非洲足球联合会", en: "Confederation of African Football" },
+const confederations: Record<ConfederationCode, { zh: string; en: string; shortZh: string; shortEn: string }> = {
+  AFC: { zh: "亚洲足球联合会", en: "Asian Football Confederation", shortZh: "亚洲足联", shortEn: "AFC" },
+  CAF: { zh: "非洲足球联合会", en: "Confederation of African Football", shortZh: "非洲足联", shortEn: "CAF" },
   CONCACAF: {
     zh: "中北美洲及加勒比海足球协会",
     en: "Confederation of North, Central America and Caribbean Association Football",
+    shortZh: "中北美及加勒比足联",
+    shortEn: "CONCACAF",
   },
-  CONMEBOL: { zh: "南美洲足球联合会", en: "South American Football Confederation" },
-  OFC: { zh: "大洋洲足球联合会", en: "Oceania Football Confederation" },
-  UEFA: { zh: "欧洲足球协会联盟", en: "Union of European Football Associations" },
+  CONMEBOL: { zh: "南美洲足球联合会", en: "South American Football Confederation", shortZh: "南美足联", shortEn: "CONMEBOL" },
+  OFC: { zh: "大洋洲足球联合会", en: "Oceania Football Confederation", shortZh: "大洋洲足联", shortEn: "OFC" },
+  UEFA: { zh: "欧洲足球协会联盟", en: "Union of European Football Associations", shortZh: "欧洲足联", shortEn: "UEFA" },
 };
 
 function codeToFlag(code: string) {
@@ -293,10 +295,12 @@ export function confedName(confed: string, language: Language) {
   return metadata?.[language] ?? confed;
 }
 
-export function confedLabel(confed: string, language: Language) {
+export function confedShortName(confed: string, language: Language) {
   const metadata = confederations[confed as ConfederationCode];
   if (!metadata) return confed;
-  const primary = metadata[language];
-  const secondary = metadata[language === "zh" ? "en" : "zh"];
-  return `${confed} · ${primary} / ${secondary}`;
+  return language === "zh" ? metadata.shortZh : metadata.shortEn;
+}
+
+export function confedLabel(confed: string, language: Language) {
+  return confedShortName(confed, language);
 }

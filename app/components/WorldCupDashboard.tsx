@@ -36,6 +36,7 @@ import {
   compactRegionLabel,
   confedLabel,
   confedName,
+  confedShortName,
   regionLabel,
   regionName,
   type Language,
@@ -338,9 +339,16 @@ function groupLabel(group: string, language: Language) {
   return language === "zh" ? `${group} 组` : `Group ${group}`;
 }
 
+function confedStageLabel(stage: string, language: Language) {
+  return (["CONCACAF", "CONMEBOL", "UEFA", "AFC", "CAF", "OFC"] as const).reduce(
+    (label, confed) => label.replaceAll(confed, confedShortName(confed, language)),
+    stage,
+  );
+}
+
 function stageLabel(stage: string, language: Language) {
-  if (language === "zh") return stage;
-  return stage
+  if (language === "zh") return confedStageLabel(stage, language);
+  return confedStageLabel(stage, language)
     .replaceAll("晋级 2026 世界杯决赛圈；", "Qualified for the 2026 World Cup finals; ")
     .replaceAll("晋级 2026 世界杯决赛圈", "Qualified for the 2026 World Cup finals")
     .replaceAll("主办国自动晋级，未参加 CONCACAF 预选赛；", "Qualified automatically as host; did not play CONCACAF qualifying; ")
@@ -449,6 +457,7 @@ export function WorldCupDashboard() {
         confedName(row.confed, "zh").toLowerCase().includes(normalized) ||
         confedName(row.confed, "en").toLowerCase().includes(normalized) ||
         row.stage.toLowerCase().includes(normalized) ||
+        stageLabel(row.stage, "zh").toLowerCase().includes(normalized) ||
         stageLabel(row.stage, "en").toLowerCase().includes(normalized);
       const matchesStatus =
         statusFilter === "all" ||
