@@ -43,8 +43,8 @@ export type KnockoutMatch = {
 };
 
 export const dataFreshness = {
-  asOf: "2026-06-21",
-  label: "截至 2026-06-21（美国太平洋时间）",
+  asOf: "2026-06-22",
+  label: "截至 2026-06-22（美国太平洋时间）",
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
@@ -271,7 +271,7 @@ export const matches: Match[] = [
   { group: "I", date: "2026-06-26", home: "Senegal", away: "Iraq", venue: "Toronto", status: "scheduled" },
   { group: "J", date: "2026-06-16", home: "Argentina", away: "Algeria", homeScore: 3, awayScore: 0, venue: "Kansas City", status: "final" },
   { group: "J", date: "2026-06-16", home: "Austria", away: "Jordan", homeScore: 3, awayScore: 1, venue: "Santa Clara", status: "final" },
-  { group: "J", date: "2026-06-22", home: "Argentina", away: "Austria", venue: "Arlington", status: "scheduled" },
+  { group: "J", date: "2026-06-22", home: "Argentina", away: "Austria", homeScore: 2, awayScore: 0, venue: "Arlington", status: "final" },
   { group: "J", date: "2026-06-22", home: "Jordan", away: "Algeria", venue: "Santa Clara", status: "scheduled" },
   { group: "J", date: "2026-06-27", home: "Algeria", away: "Austria", venue: "Kansas City", status: "scheduled" },
   { group: "J", date: "2026-06-27", home: "Jordan", away: "Argentina", venue: "Arlington", status: "scheduled" },
