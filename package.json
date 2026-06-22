@@ -11,7 +11,8 @@
     "build:pages": "vite build --config vite.pages.config.ts",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern dist-pages --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "update:worldcup": "node scripts/update-world-cup-scores.mjs"
   },
   "dependencies": {
     "d3-geo": "^3.1.1",

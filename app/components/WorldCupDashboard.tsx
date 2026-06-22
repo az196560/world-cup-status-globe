@@ -303,6 +303,13 @@ function scoreLabel(match: Match, language: Language) {
   return `${match.homeScore}-${match.awayScore}`;
 }
 
+function knockoutScoreLabel(match: KnockoutMatch) {
+  if (match.status !== "final" || match.homeScore === undefined || match.awayScore === undefined) {
+    return "vs";
+  }
+  return `${match.homeScore}-${match.awayScore}`;
+}
+
 function nextMatchFor(teamName: string) {
   return matches.find(
     (match) =>
@@ -921,7 +928,7 @@ export function WorldCupDashboard() {
                       <div className="match-id">Match {match.matchNumber}</div>
                       <div className="bracket-teams">
                         <strong>{compactRegionLabel(match.home, language)}</strong>
-                        <span>vs</span>
+                        <span>{knockoutScoreLabel(match)}</span>
                         <strong>{compactRegionLabel(match.away, language)}</strong>
                       </div>
                       <div className="bracket-meta">
@@ -948,7 +955,7 @@ export function WorldCupDashboard() {
               </div>
               <div className="bracket-teams">
                 <strong>{compactRegionLabel(thirdPlaceMatch.home, language)}</strong>
-                <span>vs</span>
+                <span>{knockoutScoreLabel(thirdPlaceMatch)}</span>
                 <strong>{compactRegionLabel(thirdPlaceMatch.away, language)}</strong>
               </div>
               <div className="bracket-meta">

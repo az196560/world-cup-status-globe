@@ -35,6 +35,9 @@ export type KnockoutMatch = {
   timezone: string;
   home: string;
   away: string;
+  homeScore?: number;
+  awayScore?: number;
+  status?: "final" | "scheduled" | "live";
   venue: string;
   city: string;
 };
@@ -245,19 +248,19 @@ export const matches: Match[] = [
   { group: "F", date: "2026-06-14", home: "Netherlands", away: "Japan", homeScore: 2, awayScore: 2, venue: "Arlington", status: "final" },
   { group: "F", date: "2026-06-14", home: "Sweden", away: "Tunisia", homeScore: 5, awayScore: 1, venue: "Guadalupe", status: "final" },
   { group: "F", date: "2026-06-20", home: "Netherlands", away: "Sweden", homeScore: 5, awayScore: 1, venue: "Houston", status: "final" },
-  { group: "F", date: "2026-06-21", home: "Tunisia", away: "Japan", venue: "Guadalupe", status: "scheduled" },
+  { group: "F", date: "2026-06-21", home: "Tunisia", away: "Japan", homeScore: 0, awayScore: 4, venue: "Guadalupe", status: "final" },
   { group: "F", date: "2026-06-25", home: "Japan", away: "Sweden", venue: "Arlington", status: "scheduled" },
   { group: "F", date: "2026-06-25", home: "Tunisia", away: "Netherlands", venue: "Kansas City", status: "scheduled" },
   { group: "G", date: "2026-06-15", home: "Belgium", away: "Egypt", homeScore: 1, awayScore: 1, venue: "Seattle", status: "final" },
   { group: "G", date: "2026-06-15", home: "Iran", away: "New Zealand", homeScore: 2, awayScore: 2, venue: "Inglewood", status: "final" },
-  { group: "G", date: "2026-06-21", home: "Belgium", away: "Iran", venue: "Inglewood", status: "scheduled" },
-  { group: "G", date: "2026-06-21", home: "New Zealand", away: "Egypt", venue: "Vancouver", status: "scheduled" },
+  { group: "G", date: "2026-06-21", home: "Belgium", away: "Iran", homeScore: 0, awayScore: 0, venue: "Inglewood", status: "final" },
+  { group: "G", date: "2026-06-21", home: "New Zealand", away: "Egypt", homeScore: 1, awayScore: 3, venue: "Vancouver", status: "final" },
   { group: "G", date: "2026-06-26", home: "Egypt", away: "Iran", venue: "Seattle", status: "scheduled" },
   { group: "G", date: "2026-06-26", home: "New Zealand", away: "Belgium", venue: "Vancouver", status: "scheduled" },
   { group: "H", date: "2026-06-15", home: "Spain", away: "Cape Verde", homeScore: 0, awayScore: 0, venue: "Atlanta", status: "final" },
   { group: "H", date: "2026-06-15", home: "Saudi Arabia", away: "Uruguay", homeScore: 1, awayScore: 1, venue: "Miami Gardens", status: "final" },
-  { group: "H", date: "2026-06-21", home: "Spain", away: "Saudi Arabia", venue: "Atlanta", status: "scheduled" },
-  { group: "H", date: "2026-06-21", home: "Uruguay", away: "Cape Verde", venue: "Miami Gardens", status: "scheduled" },
+  { group: "H", date: "2026-06-21", home: "Spain", away: "Saudi Arabia", homeScore: 4, awayScore: 0, venue: "Atlanta", status: "final" },
+  { group: "H", date: "2026-06-21", home: "Uruguay", away: "Cape Verde", homeScore: 2, awayScore: 2, venue: "Miami Gardens", status: "final" },
   { group: "H", date: "2026-06-26", home: "Cape Verde", away: "Saudi Arabia", venue: "Houston", status: "scheduled" },
   { group: "H", date: "2026-06-26", home: "Uruguay", away: "Spain", venue: "Zapopan", status: "scheduled" },
   { group: "I", date: "2026-06-16", home: "France", away: "Senegal", homeScore: 3, awayScore: 1, venue: "East Rutherford", status: "final" },
