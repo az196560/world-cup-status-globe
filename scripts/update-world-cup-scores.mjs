@@ -7,7 +7,7 @@ const dataPath = path.join(root, "app/data/worldCupData.ts");
 const scoreboardUrl =
   process.env.WORLD_CUP_SCOREBOARD_URL ??
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200";
-const updateDelayAfterKickoffMinutes = Number(process.env.WORLD_CUP_UPDATE_DELAY_MINUTES ?? 150);
+const updateDelayAfterKickoffMinutes = Number(process.env.WORLD_CUP_UPDATE_DELAY_MINUTES ?? 240);
 const dryRun = process.argv.includes("--dry-run");
 const force = process.argv.includes("--force");
 const now = process.env.WORLD_CUP_UPDATE_NOW ? new Date(process.env.WORLD_CUP_UPDATE_NOW) : new Date();
