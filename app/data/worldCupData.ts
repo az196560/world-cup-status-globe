@@ -277,7 +277,7 @@ export const matches: Match[] = [
   { group: "J", date: "2026-06-27", home: "Jordan", away: "Argentina", venue: "Arlington", status: "scheduled" },
   { group: "K", date: "2026-06-17", home: "Portugal", away: "DR Congo", homeScore: 1, awayScore: 1, venue: "Houston", status: "final" },
   { group: "K", date: "2026-06-17", home: "Uzbekistan", away: "Colombia", homeScore: 1, awayScore: 3, venue: "Mexico City", status: "final" },
-  { group: "K", date: "2026-06-23", home: "Portugal", away: "Uzbekistan", venue: "Houston", status: "scheduled" },
+  { group: "K", date: "2026-06-23", home: "Portugal", away: "Uzbekistan", homeScore: 5, awayScore: 0, venue: "Houston", status: "final" },
   { group: "K", date: "2026-06-23", home: "Colombia", away: "DR Congo", venue: "Zapopan", status: "scheduled" },
   { group: "K", date: "2026-06-27", home: "Colombia", away: "Portugal", venue: "Miami Gardens", status: "scheduled" },
   { group: "K", date: "2026-06-27", home: "DR Congo", away: "Uzbekistan", venue: "Atlanta", status: "scheduled" },
