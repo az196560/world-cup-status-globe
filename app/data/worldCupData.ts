@@ -283,7 +283,7 @@ export const matches: Match[] = [
   { group: "K", date: "2026-06-27", home: "DR Congo", away: "Uzbekistan", venue: "Atlanta", status: "scheduled" },
   { group: "L", date: "2026-06-17", home: "England", away: "Croatia", homeScore: 4, awayScore: 2, venue: "Dallas", status: "final" },
   { group: "L", date: "2026-06-17", home: "Ghana", away: "Panama", homeScore: 1, awayScore: 0, venue: "Toronto", status: "final" },
-  { group: "L", date: "2026-06-23", home: "England", away: "Ghana", venue: "Foxborough", status: "scheduled" },
+  { group: "L", date: "2026-06-23", home: "England", away: "Ghana", homeScore: 0, awayScore: 0, venue: "Foxborough", status: "final" },
   { group: "L", date: "2026-06-23", home: "Panama", away: "Croatia", venue: "Toronto", status: "scheduled" },
   { group: "L", date: "2026-06-27", home: "Panama", away: "England", venue: "East Rutherford", status: "scheduled" },
   { group: "L", date: "2026-06-27", home: "Croatia", away: "Ghana", venue: "Philadelphia", status: "scheduled" },
