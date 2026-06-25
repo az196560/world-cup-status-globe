@@ -43,8 +43,8 @@ export type KnockoutMatch = {
 };
 
 export const dataFreshness = {
-  asOf: "2026-06-23",
-  label: "截至 2026-06-23（美国太平洋时间）",
+  asOf: "2026-06-24",
+  label: "截至 2026-06-24（美国太平洋时间）",
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
@@ -225,8 +225,8 @@ export const matches: Match[] = [
   { group: "B", date: "2026-06-13", home: "Qatar", away: "Switzerland", homeScore: 1, awayScore: 1, venue: "Santa Clara", status: "final" },
   { group: "B", date: "2026-06-18", home: "Switzerland", away: "Bosnia and Herzegovina", homeScore: 4, awayScore: 1, venue: "Inglewood", status: "final" },
   { group: "B", date: "2026-06-18", home: "Canada", away: "Qatar", homeScore: 6, awayScore: 0, venue: "Vancouver", status: "final" },
-  { group: "B", date: "2026-06-24", home: "Switzerland", away: "Canada", venue: "Vancouver", status: "scheduled" },
-  { group: "B", date: "2026-06-24", home: "Bosnia and Herzegovina", away: "Qatar", venue: "Seattle", status: "scheduled" },
+  { group: "B", date: "2026-06-24", home: "Switzerland", away: "Canada", homeScore: 2, awayScore: 1, venue: "Vancouver", status: "final" },
+  { group: "B", date: "2026-06-24", home: "Bosnia and Herzegovina", away: "Qatar", homeScore: 3, awayScore: 1, venue: "Seattle", status: "final" },
   { group: "C", date: "2026-06-13", home: "Brazil", away: "Morocco", homeScore: 1, awayScore: 1, venue: "East Rutherford", status: "final" },
   { group: "C", date: "2026-06-13", home: "Haiti", away: "Scotland", homeScore: 0, awayScore: 1, venue: "Foxborough", status: "final" },
   { group: "C", date: "2026-06-19", home: "Scotland", away: "Morocco", homeScore: 0, awayScore: 1, venue: "Foxborough", status: "final" },
@@ -290,10 +290,10 @@ export const matches: Match[] = [
 ];
 
 export const knockoutMatches: KnockoutMatch[] = [
-  { matchNumber: 73, round: "Round of 32", date: "2026-06-28", time: "12:00 p.m.", timezone: "UTC-7", home: "Runner-up Group A", away: "Runner-up Group B", venue: "SoFi Stadium", city: "Inglewood" },
+  { matchNumber: 73, round: "Round of 32", date: "2026-06-28", time: "12:00 p.m.", timezone: "UTC-7", home: "Runner-up Group A", away: "Canada", venue: "SoFi Stadium", city: "Inglewood" },
   { matchNumber: 74, round: "Round of 32", date: "2026-06-29", time: "4:30 p.m.", timezone: "UTC-4", home: "Germany", away: "3rd Group A/B/C/D/F", venue: "Gillette Stadium", city: "Foxborough" },
   { matchNumber: 75, round: "Round of 32", date: "2026-06-29", time: "7:00 p.m.", timezone: "UTC-6", home: "Winner Group F", away: "Runner-up Group C", venue: "Estadio BBVA", city: "Guadalupe" },
-  { matchNumber: 76, round: "Round of 32", date: "2026-06-29", time: "12:00 p.m.", timezone: "UTC-5", home: "Winner Group C", away: "Runner-up Group F", venue: "NRG Stadium", city: "Houston" },
+  { matchNumber: 76, round: "Round of 32", date: "2026-06-29", time: "12:00 p.m.", timezone: "UTC-5", home: "Brazil", away: "Runner-up Group F", venue: "NRG Stadium", city: "Houston" },
   { matchNumber: 77, round: "Round of 32", date: "2026-06-30", time: "5:00 p.m.", timezone: "UTC-4", home: "Winner Group I", away: "3rd Group C/D/F/G/H", venue: "MetLife Stadium", city: "East Rutherford" },
   { matchNumber: 78, round: "Round of 32", date: "2026-06-30", time: "12:00 p.m.", timezone: "UTC-5", home: "Runner-up Group E", away: "Runner-up Group I", venue: "AT&T Stadium", city: "Arlington" },
   { matchNumber: 79, round: "Round of 32", date: "2026-06-30", time: "7:00 p.m.", timezone: "UTC-6", home: "Mexico", away: "3rd Group C/E/F/H/I", venue: "Estadio Azteca", city: "Mexico City" },
