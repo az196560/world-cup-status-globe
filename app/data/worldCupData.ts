@@ -219,8 +219,8 @@ export const matches: Match[] = [
   { group: "A", date: "2026-06-11", home: "South Korea", away: "Czechia", homeScore: 2, awayScore: 1, venue: "Zapopan", status: "final" },
   { group: "A", date: "2026-06-18", home: "Czechia", away: "South Africa", homeScore: 1, awayScore: 1, venue: "Atlanta", status: "final" },
   { group: "A", date: "2026-06-18", home: "Mexico", away: "South Korea", homeScore: 1, awayScore: 0, venue: "Zapopan", status: "final" },
-  { group: "A", date: "2026-06-24", home: "Czechia", away: "Mexico", venue: "Mexico City", status: "scheduled" },
-  { group: "A", date: "2026-06-24", home: "South Africa", away: "South Korea", venue: "Guadalupe", status: "scheduled" },
+  { group: "A", date: "2026-06-24", home: "Czechia", away: "Mexico", homeScore: 0, awayScore: 3, venue: "Mexico City", status: "final" },
+  { group: "A", date: "2026-06-24", home: "South Africa", away: "South Korea", homeScore: 1, awayScore: 0, venue: "Guadalupe", status: "final" },
   { group: "B", date: "2026-06-12", home: "Canada", away: "Bosnia and Herzegovina", homeScore: 1, awayScore: 1, venue: "Toronto", status: "final" },
   { group: "B", date: "2026-06-13", home: "Qatar", away: "Switzerland", homeScore: 1, awayScore: 1, venue: "Santa Clara", status: "final" },
   { group: "B", date: "2026-06-18", home: "Switzerland", away: "Bosnia and Herzegovina", homeScore: 4, awayScore: 1, venue: "Inglewood", status: "final" },
@@ -231,8 +231,8 @@ export const matches: Match[] = [
   { group: "C", date: "2026-06-13", home: "Haiti", away: "Scotland", homeScore: 0, awayScore: 1, venue: "Foxborough", status: "final" },
   { group: "C", date: "2026-06-19", home: "Scotland", away: "Morocco", homeScore: 0, awayScore: 1, venue: "Foxborough", status: "final" },
   { group: "C", date: "2026-06-19", home: "Brazil", away: "Haiti", homeScore: 3, awayScore: 0, venue: "Philadelphia", status: "final" },
-  { group: "C", date: "2026-06-24", home: "Scotland", away: "Brazil", venue: "Miami Gardens", status: "scheduled" },
-  { group: "C", date: "2026-06-24", home: "Morocco", away: "Haiti", venue: "Atlanta", status: "scheduled" },
+  { group: "C", date: "2026-06-24", home: "Scotland", away: "Brazil", homeScore: 0, awayScore: 3, venue: "Miami Gardens", status: "final" },
+  { group: "C", date: "2026-06-24", home: "Morocco", away: "Haiti", homeScore: 4, awayScore: 2, venue: "Atlanta", status: "final" },
   { group: "D", date: "2026-06-12", home: "United States", away: "Paraguay", homeScore: 4, awayScore: 1, venue: "Inglewood", status: "final" },
   { group: "D", date: "2026-06-13", home: "Australia", away: "Türkiye", homeScore: 2, awayScore: 0, venue: "Vancouver", status: "final" },
   { group: "D", date: "2026-06-19", home: "United States", away: "Australia", homeScore: 2, awayScore: 0, venue: "Seattle", status: "final" },
@@ -290,7 +290,7 @@ export const matches: Match[] = [
 ];
 
 export const knockoutMatches: KnockoutMatch[] = [
-  { matchNumber: 73, round: "Round of 32", date: "2026-06-28", time: "12:00 p.m.", timezone: "UTC-7", home: "Runner-up Group A", away: "Canada", venue: "SoFi Stadium", city: "Inglewood" },
+  { matchNumber: 73, round: "Round of 32", date: "2026-06-28", time: "12:00 p.m.", timezone: "UTC-7", home: "South Africa", away: "Canada", venue: "SoFi Stadium", city: "Inglewood" },
   { matchNumber: 74, round: "Round of 32", date: "2026-06-29", time: "4:30 p.m.", timezone: "UTC-4", home: "Germany", away: "3rd Group A/B/C/D/F", venue: "Gillette Stadium", city: "Foxborough" },
   { matchNumber: 75, round: "Round of 32", date: "2026-06-29", time: "7:00 p.m.", timezone: "UTC-6", home: "Winner Group F", away: "Runner-up Group C", venue: "Estadio BBVA", city: "Guadalupe" },
   { matchNumber: 76, round: "Round of 32", date: "2026-06-29", time: "12:00 p.m.", timezone: "UTC-5", home: "Brazil", away: "Runner-up Group F", venue: "NRG Stadium", city: "Houston" },
