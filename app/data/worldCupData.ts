@@ -43,8 +43,8 @@ export type KnockoutMatch = {
 };
 
 export const dataFreshness = {
-  asOf: "2026-06-26",
-  label: "截至 2026-06-26（美国太平洋时间）",
+  asOf: "2026-06-27",
+  label: "截至 2026-06-27（美国太平洋时间）",
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
@@ -255,8 +255,8 @@ export const matches: Match[] = [
   { group: "G", date: "2026-06-15", home: "Iran", away: "New Zealand", homeScore: 2, awayScore: 2, venue: "Inglewood", status: "final" },
   { group: "G", date: "2026-06-21", home: "Belgium", away: "Iran", homeScore: 0, awayScore: 0, venue: "Inglewood", status: "final" },
   { group: "G", date: "2026-06-21", home: "New Zealand", away: "Egypt", homeScore: 1, awayScore: 3, venue: "Vancouver", status: "final" },
-  { group: "G", date: "2026-06-26", home: "Egypt", away: "Iran", venue: "Seattle", status: "scheduled" },
-  { group: "G", date: "2026-06-26", home: "New Zealand", away: "Belgium", venue: "Vancouver", status: "scheduled" },
+  { group: "G", date: "2026-06-26", home: "Egypt", away: "Iran", homeScore: 1, awayScore: 1, venue: "Seattle", status: "final" },
+  { group: "G", date: "2026-06-26", home: "New Zealand", away: "Belgium", homeScore: 1, awayScore: 5, venue: "Vancouver", status: "final" },
   { group: "H", date: "2026-06-15", home: "Spain", away: "Cape Verde", homeScore: 0, awayScore: 0, venue: "Atlanta", status: "final" },
   { group: "H", date: "2026-06-15", home: "Saudi Arabia", away: "Uruguay", homeScore: 1, awayScore: 1, venue: "Miami Gardens", status: "final" },
   { group: "H", date: "2026-06-21", home: "Spain", away: "Saudi Arabia", homeScore: 4, awayScore: 0, venue: "Atlanta", status: "final" },
