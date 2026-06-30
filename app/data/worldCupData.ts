@@ -291,7 +291,7 @@ export const matches: Match[] = [
 
 export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 73, round: "Round of 32", date: "2026-06-28", time: "12:00 p.m.", timezone: "UTC-7", home: "South Africa", away: "Canada", homeScore: 0, awayScore: 1, status: "final", venue: "SoFi Stadium", city: "Inglewood" },
-  { matchNumber: 74, round: "Round of 32", date: "2026-06-29", time: "4:30 p.m.", timezone: "UTC-4", home: "Germany", away: "Paraguay", venue: "Gillette Stadium", city: "Foxborough" },
+  { matchNumber: 74, round: "Round of 32", date: "2026-06-29", time: "4:30 p.m.", timezone: "UTC-4", home: "Germany", away: "Paraguay", homeScore: 1, awayScore: 1, status: "final", venue: "Gillette Stadium", city: "Foxborough" },
   { matchNumber: 75, round: "Round of 32", date: "2026-06-29", time: "7:00 p.m.", timezone: "UTC-6", home: "Winner Group F", away: "Runner-up Group C", venue: "Estadio BBVA", city: "Guadalupe" },
   { matchNumber: 76, round: "Round of 32", date: "2026-06-29", time: "12:00 p.m.", timezone: "UTC-5", home: "Brazil", away: "Japan", homeScore: 2, awayScore: 1, status: "final", venue: "NRG Stadium", city: "Houston" },
   { matchNumber: 77, round: "Round of 32", date: "2026-06-30", time: "5:00 p.m.", timezone: "UTC-4", home: "France", away: "Sweden", venue: "MetLife Stadium", city: "East Rutherford" },
@@ -306,8 +306,8 @@ export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 86, round: "Round of 32", date: "2026-07-03", time: "6:00 p.m.", timezone: "UTC-4", home: "Argentina", away: "Cape Verde", venue: "Hard Rock Stadium", city: "Miami Gardens" },
   { matchNumber: 87, round: "Round of 32", date: "2026-07-03", time: "8:30 p.m.", timezone: "UTC-5", home: "Winner Group K", away: "3rd Group D/E/I/J/L", venue: "Arrowhead Stadium", city: "Kansas City" },
   { matchNumber: 88, round: "Round of 32", date: "2026-07-03", time: "1:00 p.m.", timezone: "UTC-5", home: "Australia", away: "Egypt", venue: "AT&T Stadium", city: "Arlington" },
-  { matchNumber: 89, round: "Round of 16", date: "2026-07-04", time: "5:00 p.m.", timezone: "UTC-4", home: "Winner Match 74", away: "Winner Match 77", venue: "Lincoln Financial Field", city: "Philadelphia" },
-  { matchNumber: 90, round: "Round of 16", date: "2026-07-04", time: "12:00 p.m.", timezone: "UTC-5", home: "Canada", away: "Winner Match 75", venue: "NRG Stadium", city: "Houston" },
+  { matchNumber: 89, round: "Round of 16", date: "2026-07-04", time: "5:00 p.m.", timezone: "UTC-4", home: "Paraguay", away: "Winner Match 77", venue: "Lincoln Financial Field", city: "Philadelphia" },
+  { matchNumber: 90, round: "Round of 16", date: "2026-07-04", time: "12:00 p.m.", timezone: "UTC-5", home: "Canada", away: "Morocco", venue: "NRG Stadium", city: "Houston" },
   { matchNumber: 91, round: "Round of 16", date: "2026-07-05", time: "4:00 p.m.", timezone: "UTC-4", home: "Brazil", away: "Winner Match 78", venue: "MetLife Stadium", city: "East Rutherford" },
   { matchNumber: 92, round: "Round of 16", date: "2026-07-05", time: "6:00 p.m.", timezone: "UTC-6", home: "Winner Match 79", away: "Winner Match 80", venue: "Estadio Azteca", city: "Mexico City" },
   { matchNumber: 93, round: "Round of 16", date: "2026-07-06", time: "2:00 p.m.", timezone: "UTC-5", home: "Winner Match 83", away: "Winner Match 84", venue: "AT&T Stadium", city: "Arlington" },
