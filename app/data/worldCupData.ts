@@ -43,8 +43,8 @@ export type KnockoutMatch = {
 };
 
 export const dataFreshness = {
-  asOf: "2026-06-30",
-  label: "截至 2026-06-30（美国太平洋时间）",
+  asOf: "2026-07-01",
+  label: "截至 2026-07-01（美国太平洋时间）",
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
@@ -297,7 +297,7 @@ export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 77, round: "Round of 32", date: "2026-06-30", time: "5:00 p.m.", timezone: "UTC-4", home: "France", away: "Sweden", homeScore: 3, awayScore: 0, status: "final", venue: "MetLife Stadium", city: "East Rutherford" },
   { matchNumber: 78, round: "Round of 32", date: "2026-06-30", time: "12:00 p.m.", timezone: "UTC-5", home: "Côte d’Ivoire", away: "Norway", homeScore: 1, awayScore: 2, status: "final", venue: "AT&T Stadium", city: "Arlington" },
   { matchNumber: 79, round: "Round of 32", date: "2026-06-30", time: "7:00 p.m.", timezone: "UTC-6", home: "Mexico", away: "3rd Group C/E/F/H/I", venue: "Estadio Azteca", city: "Mexico City" },
-  { matchNumber: 80, round: "Round of 32", date: "2026-07-01", time: "12:00 p.m.", timezone: "UTC-4", home: "England", away: "DR Congo", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+  { matchNumber: 80, round: "Round of 32", date: "2026-07-01", time: "12:00 p.m.", timezone: "UTC-4", home: "England", away: "DR Congo", homeScore: 2, awayScore: 1, status: "final", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { matchNumber: 81, round: "Round of 32", date: "2026-07-01", time: "5:00 p.m.", timezone: "UTC-7", home: "United States", away: "3rd Group B/E/F/I/J", venue: "Levi's Stadium", city: "Santa Clara" },
   { matchNumber: 82, round: "Round of 32", date: "2026-07-01", time: "1:00 p.m.", timezone: "UTC-7", home: "Belgium", away: "Senegal", venue: "Lumen Field", city: "Seattle" },
   { matchNumber: 83, round: "Round of 32", date: "2026-07-02", time: "7:00 p.m.", timezone: "UTC-4", home: "Portugal", away: "Croatia", venue: "BMO Field", city: "Toronto" },
