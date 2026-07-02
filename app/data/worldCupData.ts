@@ -299,7 +299,7 @@ export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 79, round: "Round of 32", date: "2026-06-30", time: "7:00 p.m.", timezone: "UTC-6", home: "Mexico", away: "3rd Group C/E/F/H/I", venue: "Estadio Azteca", city: "Mexico City" },
   { matchNumber: 80, round: "Round of 32", date: "2026-07-01", time: "12:00 p.m.", timezone: "UTC-4", home: "England", away: "DR Congo", homeScore: 2, awayScore: 1, status: "final", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { matchNumber: 81, round: "Round of 32", date: "2026-07-01", time: "5:00 p.m.", timezone: "UTC-7", home: "United States", away: "3rd Group B/E/F/I/J", venue: "Levi's Stadium", city: "Santa Clara" },
-  { matchNumber: 82, round: "Round of 32", date: "2026-07-01", time: "1:00 p.m.", timezone: "UTC-7", home: "Belgium", away: "Senegal", venue: "Lumen Field", city: "Seattle" },
+  { matchNumber: 82, round: "Round of 32", date: "2026-07-01", time: "1:00 p.m.", timezone: "UTC-7", home: "Belgium", away: "Senegal", homeScore: 3, awayScore: 2, status: "final", venue: "Lumen Field", city: "Seattle" },
   { matchNumber: 83, round: "Round of 32", date: "2026-07-02", time: "7:00 p.m.", timezone: "UTC-4", home: "Portugal", away: "Croatia", venue: "BMO Field", city: "Toronto" },
   { matchNumber: 84, round: "Round of 32", date: "2026-07-02", time: "12:00 p.m.", timezone: "UTC-7", home: "Spain", away: "Austria", venue: "SoFi Stadium", city: "Inglewood" },
   { matchNumber: 85, round: "Round of 32", date: "2026-07-02", time: "8:00 p.m.", timezone: "UTC-7", home: "Winner Group B", away: "3rd Group E/F/G/I/J", venue: "BC Place", city: "Vancouver" },
