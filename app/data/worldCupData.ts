@@ -43,8 +43,8 @@ export type KnockoutMatch = {
 };
 
 export const dataFreshness = {
-  asOf: "2026-07-01",
-  label: "截至 2026-07-01（美国太平洋时间）",
+  asOf: "2026-07-02",
+  label: "截至 2026-07-02（美国太平洋时间）",
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
@@ -301,7 +301,7 @@ export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 81, round: "Round of 32", date: "2026-07-01", time: "5:00 p.m.", timezone: "UTC-7", home: "United States", away: "3rd Group B/E/F/I/J", venue: "Levi's Stadium", city: "Santa Clara" },
   { matchNumber: 82, round: "Round of 32", date: "2026-07-01", time: "1:00 p.m.", timezone: "UTC-7", home: "Belgium", away: "Senegal", homeScore: 3, awayScore: 2, status: "final", venue: "Lumen Field", city: "Seattle" },
   { matchNumber: 83, round: "Round of 32", date: "2026-07-02", time: "7:00 p.m.", timezone: "UTC-4", home: "Portugal", away: "Croatia", venue: "BMO Field", city: "Toronto" },
-  { matchNumber: 84, round: "Round of 32", date: "2026-07-02", time: "12:00 p.m.", timezone: "UTC-7", home: "Spain", away: "Austria", venue: "SoFi Stadium", city: "Inglewood" },
+  { matchNumber: 84, round: "Round of 32", date: "2026-07-02", time: "12:00 p.m.", timezone: "UTC-7", home: "Spain", away: "Austria", homeScore: 3, awayScore: 0, status: "final", venue: "SoFi Stadium", city: "Inglewood" },
   { matchNumber: 85, round: "Round of 32", date: "2026-07-02", time: "8:00 p.m.", timezone: "UTC-7", home: "Winner Group B", away: "3rd Group E/F/G/I/J", venue: "BC Place", city: "Vancouver" },
   { matchNumber: 86, round: "Round of 32", date: "2026-07-03", time: "6:00 p.m.", timezone: "UTC-4", home: "Argentina", away: "Cape Verde", venue: "Hard Rock Stadium", city: "Miami Gardens" },
   { matchNumber: 87, round: "Round of 32", date: "2026-07-03", time: "8:30 p.m.", timezone: "UTC-5", home: "Winner Group K", away: "3rd Group D/E/I/J/L", venue: "Arrowhead Stadium", city: "Kansas City" },
@@ -310,7 +310,7 @@ export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 90, round: "Round of 16", date: "2026-07-04", time: "12:00 p.m.", timezone: "UTC-5", home: "Canada", away: "Morocco", venue: "NRG Stadium", city: "Houston" },
   { matchNumber: 91, round: "Round of 16", date: "2026-07-05", time: "4:00 p.m.", timezone: "UTC-4", home: "Brazil", away: "Norway", venue: "MetLife Stadium", city: "East Rutherford" },
   { matchNumber: 92, round: "Round of 16", date: "2026-07-05", time: "6:00 p.m.", timezone: "UTC-6", home: "Winner Match 79", away: "Winner Match 80", venue: "Estadio Azteca", city: "Mexico City" },
-  { matchNumber: 93, round: "Round of 16", date: "2026-07-06", time: "2:00 p.m.", timezone: "UTC-5", home: "Winner Match 83", away: "Winner Match 84", venue: "AT&T Stadium", city: "Arlington" },
+  { matchNumber: 93, round: "Round of 16", date: "2026-07-06", time: "2:00 p.m.", timezone: "UTC-5", home: "Winner Match 83", away: "Spain", venue: "AT&T Stadium", city: "Arlington" },
   { matchNumber: 94, round: "Round of 16", date: "2026-07-06", time: "5:00 p.m.", timezone: "UTC-7", home: "Winner Match 81", away: "Winner Match 82", venue: "Lumen Field", city: "Seattle" },
   { matchNumber: 95, round: "Round of 16", date: "2026-07-07", time: "12:00 p.m.", timezone: "UTC-4", home: "Winner Match 86", away: "Winner Match 88", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { matchNumber: 96, round: "Round of 16", date: "2026-07-07", time: "1:00 p.m.", timezone: "UTC-7", home: "Winner Match 85", away: "Winner Match 87", venue: "BC Place", city: "Vancouver" },
