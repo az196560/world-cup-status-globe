@@ -43,8 +43,8 @@ export type KnockoutMatch = {
 };
 
 export const dataFreshness = {
-  asOf: "2026-07-06",
-  label: "截至 2026-07-06（美国太平洋时间）",
+  asOf: "2026-07-07",
+  label: "截至 2026-07-07（美国太平洋时间）",
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
@@ -315,7 +315,7 @@ export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 95, round: "Round of 16", date: "2026-07-07", time: "12:00 p.m.", timezone: "UTC-4", home: "Argentina", away: "Egypt", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { matchNumber: 96, round: "Round of 16", date: "2026-07-07", time: "1:00 p.m.", timezone: "UTC-7", home: "Switzerland", away: "Colombia", venue: "BC Place", city: "Vancouver" },
   { matchNumber: 97, round: "Quarterfinals", date: "2026-07-09", time: "4:00 p.m.", timezone: "UTC-4", home: "France", away: "Morocco", venue: "Gillette Stadium", city: "Foxborough" },
-  { matchNumber: 98, round: "Quarterfinals", date: "2026-07-10", time: "12:00 p.m.", timezone: "UTC-7", home: "Spain", away: "Winner Match 94", venue: "SoFi Stadium", city: "Inglewood" },
+  { matchNumber: 98, round: "Quarterfinals", date: "2026-07-10", time: "12:00 p.m.", timezone: "UTC-7", home: "Spain", away: "Belgium", venue: "SoFi Stadium", city: "Inglewood" },
   { matchNumber: 99, round: "Quarterfinals", date: "2026-07-11", time: "5:00 p.m.", timezone: "UTC-4", home: "Norway", away: "England", venue: "Hard Rock Stadium", city: "Miami Gardens" },
   { matchNumber: 100, round: "Quarterfinals", date: "2026-07-11", time: "8:00 p.m.", timezone: "UTC-5", home: "Winner Match 95", away: "Winner Match 96", venue: "Arrowhead Stadium", city: "Kansas City" },
   { matchNumber: 101, round: "Semifinals", date: "2026-07-14", time: "2:00 p.m.", timezone: "UTC-5", home: "Winner Match 97", away: "Winner Match 98", venue: "AT&T Stadium", city: "Arlington" },
