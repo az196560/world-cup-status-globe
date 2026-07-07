@@ -312,7 +312,7 @@ export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 92, round: "Round of 16", date: "2026-07-05", time: "6:00 p.m.", timezone: "UTC-6", home: "Winner Match 79", away: "Winner Match 80", venue: "Estadio Azteca", city: "Mexico City" },
   { matchNumber: 93, round: "Round of 16", date: "2026-07-06", time: "2:00 p.m.", timezone: "UTC-5", home: "Portugal", away: "Spain", homeScore: 0, awayScore: 1, status: "final", venue: "AT&T Stadium", city: "Arlington" },
   { matchNumber: 94, round: "Round of 16", date: "2026-07-06", time: "5:00 p.m.", timezone: "UTC-7", home: "Winner Match 81", away: "Winner Match 82", venue: "Lumen Field", city: "Seattle" },
-  { matchNumber: 95, round: "Round of 16", date: "2026-07-07", time: "12:00 p.m.", timezone: "UTC-4", home: "Argentina", away: "Egypt", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+  { matchNumber: 95, round: "Round of 16", date: "2026-07-07", time: "12:00 p.m.", timezone: "UTC-4", home: "Argentina", away: "Egypt", homeScore: 3, awayScore: 2, status: "final", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { matchNumber: 96, round: "Round of 16", date: "2026-07-07", time: "1:00 p.m.", timezone: "UTC-7", home: "Switzerland", away: "Colombia", venue: "BC Place", city: "Vancouver" },
   { matchNumber: 97, round: "Quarterfinals", date: "2026-07-09", time: "4:00 p.m.", timezone: "UTC-4", home: "France", away: "Morocco", venue: "Gillette Stadium", city: "Foxborough" },
   { matchNumber: 98, round: "Quarterfinals", date: "2026-07-10", time: "12:00 p.m.", timezone: "UTC-7", home: "Spain", away: "Belgium", venue: "SoFi Stadium", city: "Inglewood" },
