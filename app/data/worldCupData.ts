@@ -43,8 +43,8 @@ export type KnockoutMatch = {
 };
 
 export const dataFreshness = {
-  asOf: "2026-07-18",
-  label: "截至 2026-07-18（美国太平洋时间）",
+  asOf: "2026-07-19",
+  label: "截至 2026-07-19（美国太平洋时间）",
   notes: [
     "决赛圈比分按 ESPN 赛程页和 FIFA 比赛中心整理。",
     "淘汰赛对阵图按 FIFA 已公布的比赛编号、当地开球时间和场馆整理；未定席位以小组名或胜者编号展示。",
@@ -321,7 +321,7 @@ export const knockoutMatches: KnockoutMatch[] = [
   { matchNumber: 101, round: "Semifinals", date: "2026-07-14", time: "2:00 p.m.", timezone: "UTC-5", home: "France", away: "Spain", homeScore: 0, awayScore: 2, status: "final", venue: "AT&T Stadium", city: "Arlington" },
   { matchNumber: 102, round: "Semifinals", date: "2026-07-15", time: "3:00 p.m.", timezone: "UTC-4", home: "England", away: "Argentina", homeScore: 1, awayScore: 2, status: "final", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { matchNumber: 103, round: "Third place", date: "2026-07-18", time: "5:00 p.m.", timezone: "UTC-4", home: "France", away: "England", homeScore: 4, awayScore: 6, status: "final", venue: "Hard Rock Stadium", city: "Miami Gardens" },
-  { matchNumber: 104, round: "Final", date: "2026-07-19", time: "3:00 p.m.", timezone: "UTC-4", home: "Spain", away: "Argentina", venue: "MetLife Stadium", city: "East Rutherford" },
+  { matchNumber: 104, round: "Final", date: "2026-07-19", time: "3:00 p.m.", timezone: "UTC-4", home: "Spain", away: "Argentina", homeScore: 1, awayScore: 0, status: "final", venue: "MetLife Stadium", city: "East Rutherford" },
 ];
 
 export const countryAliases: Record<string, string> = {
